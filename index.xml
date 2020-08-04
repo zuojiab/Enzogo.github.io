@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Be determined to have a great day and you will!</title>
+    <link>https://keda725.github.io/</link>
+    <description>Recent content on Be determined to have a great day and you will!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Tue, 04 Aug 2020 23:52:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://keda725.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Maven这个划时代的构建工具  Apache顶级项目</title>
+      <link>https://keda725.github.io/posts/maven%E8%BF%99%E4%B8%AA%E5%88%92%E6%97%B6%E4%BB%A3%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7-apache%E9%A1%B6%E7%BA%A7%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Tue, 04 Aug 2020 23:52:59 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/maven%E8%BF%99%E4%B8%AA%E5%88%92%E6%97%B6%E4%BB%A3%E7%9A%84%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7-apache%E9%A1%B6%E7%BA%A7%E9%A1%B9%E7%9B%AE/</guid>
+      <description>1.Maven是啥：  Maven是Apache软件基金会唯一维护的一款自动化构建工具，专注于服务Java平台的项目构建和依赖管理。 Maven是基于项目对象模型（POM），可以通过一小段描述信息来管理项目的构建、报告和文档的软件项目管理工具。
+2.Maven可以干啥：  添加第三方jar包 jar包之间的依赖关系： Maven 可以替我们自动的将当前 jar 包所依赖的其他所有 jar 包全部导入进来 获取第三方jar包： Maven 提供了一个完全统一规范的 jar 包管理体系，只需要在项目中以坐标的方式依赖一个 jar 包，Maven 就会自动从中央仓库进行下载到本地仓库 将项目拆分成多个工程模块 构建项目（打包，编译等）
+3.构建项目的几个主要环节：    清理（clean）：删除以前的编译结果，为重新编译做好准备
+  编译（compile）：将Java 源程序编译为字节码文件
+  测试（test）：针对项目中的关键点进行测试，确保项目在迭代开发过程中关键点的正确性
+  报告：在每一次测试后以标准的格式记录和展示测试结果
+  打包（package）：将一个包含诸多文件的工程封装为一个压缩文件用于安装或部署。Java 工程对应 jar 包，Web工程对应 war 包。
+  安装（install）：在 Maven 环境下特指将打包的结果——jar 包或 war 包安装到本地仓库中。
+  部署（deploy）：将打包的结果部署到远程仓库或将 war 包部署到服务器上运行。
+  4.maven常用命令   mvn -version/-v —— 显示版本信息 mvn clean —— 清空生成的文件 mvn compile —— 编译 mvn test —— 编译并测试 mvn package —— 生成target目录，编译、测试代码，生成测试报告，生成jar/war文件 mvn site —— 生成项目相关信息的网站 mvn clean compile —— 表示先运行清理之后运行编译，会将代码编译到target文件夹中 mvn clean package —— 运行清理和打包 mvn clean install —— 运行清理和安装，会将打好的包安装到本地仓库中，以便其他的项目可以调用 mvn clean deploy —— 运行清理和发布  5.</description>
+    </item>
+    
+    <item>
+      <title>Hugo从无到有以及图片处理问题</title>
+      <link>https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Tue, 04 Aug 2020 23:52:41 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</guid>
+      <description>为什么选择hugo? ​	因为也是刚刚开始搭建自己的博客，看了CodeSheep程序羊老哥以前介绍的hugo，是基于go语言写的，特点就是快，也符合我们当代年轻人的特点(😁)，另外就是搭建起来也很方便 简单几个命令，就可以看到成果，不至于半途而废。(另外google了一下为什么选择hugo？看看别人是怎么说的 机灵鬼.gif)
+​	第一点得提的就是Hugo 打出的标语 &amp;ndash; “The world’s fastest framework for building websites”。Hugo 依靠Go语言进行开发，号称世界上最快的构建网站工具，到底有多快？根据相关博主提供的数据，他200篇左右的博文用Hexo 需要10分钟去生成静态网页，而Hugo 只需要10秒。就我个人的体验来说，Hugo确实大大加快了网页生成的速度，平常增加一篇博文然后再生成渲染需要4秒左右，而Hugo基本上是1秒内完成。正是依赖于Hugo 快速生成的特点，调试方便成了Hugo的第二大特点。基本上我在源文件处修改的内容可以实时地显示在网页上，而不用再次敲代码生成再预览，这对于博主来说简直就是一个福音。
+放个链接 看看能不能说服你？
+hugo从0到1 ​	我建议和我一样的新手 不要直接google搜索 hugo搭建博客 因为有的时候 在别人那行得通 但是到自己这里不行 就会怀疑自己的能力，是不是自己太辣鸡，其实是有的时候写博客，只是为了自己记录一下，可能把有些步骤给省略了，但是官网不会啊，官网就是想让你都能完成，都来使用，所以步骤都会写的很清楚，所以我先把*官网放在链接里，大家通过查阅文档，有问题了再来看我的博客，这样学习起来，自己的印象也会比较深。*
+​	*odk，废话不多说，我开始啦！（我的环境是macOS）*
+*No1 下载Hugo mac推荐是用homebrew 我后面会写homebrew的教程 这里先欠着哈* brew install hugo //使用brew下载hugo hugo version //查看hugo版本 确定是否下载成功 hugo new site xxx //xxx 是你文件的名字 hugo new site keda725.github.io git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng hugo server -t hello-friend-ng -D echo &#39;theme = &amp;quot;hello-friend-ng &amp;quot;&#39; &amp;gt;&amp;gt; config.</description>
+    </item>
+    
+    <item>
+      <title>CollectionMap由浅及深（一）</title>
+      <link>https://keda725.github.io/posts/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/</link>
+      <pubDate>Tue, 04 Aug 2020 23:52:22 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/</guid>
+      <description>Collection、Map由浅及深（一） Java集合类介绍： Java集合大致可以分为Set、List、Queue和Map四种体系
+  Set代表无序、不可重复的集合；
+  List代表有序、重复的集合；
+  Map则代表具有映射关系的集合；
+  Java 5 又增加了Queue体系集合，代表一种队列集合实现。
+ Java集合就像一种容器，可以把多个对象（实际上是对象的引用，但习惯上都称对象）“丢进”该容器中。从Java 5 增加了泛型（此处以后会有链接）以后，Java集合可以记住容器中对象的数据类型，使得编码更加简洁、健壮。
+  集合和数组的区别：  数组长度在初始化时指定，只能保存定长的数据。 集合可以保存数量不确定的数据 同时可以保存具有映射关系的数据 （即关联数据 键值对 key-value） 数组元素即可以是基本数据的值 也可以是对象 集合中只能保存对象（即对象的引用变量）基本数据类型要转换成对应的包装类才能放在在集合中。   集合之间的继承关系 Java的集合类主要由两个接口派生而出：Collection和Map,Collection和Map是Java集合框架的根接口。
+ArrayList,HashSet,LinkedList,TreeSet是经常用到的已实现的集合类。
+Map实现类用于保存具有映射关系的数据。Map保存的每项数据都是key-value对，也就是由key和value两个值组成。Map里的key是不可重复的，key用户标识集合里的每项数据。
+图中，HashMap，TreeMap是我们经常会用到的集合类。
+Collection 接口： 简介 Collection接口是Set,Queue,List的父接口。Collection接口中定义了多种方法可供其子类进行实现，以实现数据操作。
+ add 添加元素 addAll 添加所有元素到collection中 clear 清除collection中所有的元素 contains 如果collection中包含指定的元素 返回true equals 比较collection中包含的元素与指定元素是否相等 hashCode 返回collection的哈希值 isEmpty 如果collection中不包含元素 返回true iterator 返回在collection的元素上进行迭代的迭代器 remove 从此collection中移除指定元素的单个实例 removeAll 从此collection中所有的元素 retainAll 只保留此collection中那些包含制定collection的元素 size 返回collection中的元素数 toArray 返回包含此collection中所有元素的数组  可以看出Collection用法有：添加元素，删除元素，返回Collection集合的个数以及清空集合等。 其中重点介绍iterator()方法，该方法的返回值是Iterator。</description>
+    </item>
+    
+    <item>
+      <title>Hugo从无到有以及图片处理问题</title>
+      <link>https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98-2/</link>
+      <pubDate>Tue, 04 Aug 2020 22:55:58 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98-2/</guid>
+      <description>为什么选择hugo?  ​	因为也是刚刚开始搭建自己的博客，看了CodeSheep程序羊老哥以前介绍的hugo，是基于go语言写的，特点就是快，也符合我们当代年轻人的特点(😁)，另外就是搭建起来也很方便 简单几个命令，就可以看到成果，不至于半途而废。(另外google了一下为什么选择hugo？看看别人是怎么说的 机灵鬼.gif)
+​	第一点得提的就是Hugo 打出的标语 &amp;ndash; “The world’s fastest framework for building websites”。Hugo 依靠Go语言进行开发，号称世界上最快的构建网站工具，到底有多快？根据相关博主提供的数据，他200篇左右的博文用Hexo 需要10分钟去生成静态网页，而Hugo 只需要10秒。就我个人的体验来说，Hugo确实大大加快了网页生成的速度，平常增加一篇博文然后再生成渲染需要4秒左右，而Hugo基本上是1秒内完成。正是依赖于Hugo 快速生成的特点，调试方便成了Hugo的第二大特点。基本上我在源文件处修改的内容可以实时地显示在网页上，而不用再次敲代码生成再预览，这对于博主来说简直就是一个福音。
+放个链接 看看能不能说服你？
+hugo从0到1  ​	我建议和我一样的新手 不要直接google搜索 hugo搭建博客 因为有的时候 在别人那行得通 但是到自己这里不行 就会怀疑自己的能力，是不是自己太辣鸡，其实是有的时候写博客，只是为了自己记录一下，可能把有些步骤给省略了，但是官网不会啊，官网就是想让你都能完成，都来使用，所以步骤都会写的很清楚，所以我先把**官网**放在链接里，大家通过查阅文档，有问题了再来看我的博客，这样学习起来，自己的印象也会比较深。
+​	odk，废话不多说，我开始啦！（我的环境是macOS）
+No1 下载Hugo mac推荐是用homebrew 我后面会写homebrew的教程 这里先欠着哈  brew install hugo //使用brew下载hugo hugo version	//查看hugo版本 确定是否下载成功 看到这个就代表你成功下载了Hugo!!! 🎉🎉🎉
+No2 Hugo 创建一个博客 hugo new site xxx //xxx 是你文件的名字 hugo new site keda725.github.io 你就会发现Hugo在当前路径下创建了一个keda725.github.io的文件夹，可以看到Hugo为我们创建了一些文件，themes，date，static等。
+|- archetypes ：存放default.md，头文件格式 |- content ：content目录存放博客文章（markdown文件） |- data ：存放自定义模版，导入的toml文件（或json，yaml） |- layouts ：layouts目录存放的是网站的模板文件 |- static ：static目录存放图片，css等静态资源 |- themes ：存放网站主题文件 |- config.</description>
+    </item>
+    
+  </channel>
+</rss>

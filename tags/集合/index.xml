@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>集合 on Be determined to have a great day and you will!</title>
+    <link>https://keda725.github.io/tags/%E9%9B%86%E5%90%88/</link>
+    <description>Recent content in 集合 on Be determined to have a great day and you will!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Tue, 04 Aug 2020 23:52:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://keda725.github.io/tags/%E9%9B%86%E5%90%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CollectionMap由浅及深（一）</title>
+      <link>https://keda725.github.io/posts/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/</link>
+      <pubDate>Tue, 04 Aug 2020 23:52:22 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/</guid>
+      <description>Collection、Map由浅及深（一） Java集合类介绍： Java集合大致可以分为Set、List、Queue和Map四种体系
+  Set代表无序、不可重复的集合；
+  List代表有序、重复的集合；
+  Map则代表具有映射关系的集合；
+  Java 5 又增加了Queue体系集合，代表一种队列集合实现。
+ Java集合就像一种容器，可以把多个对象（实际上是对象的引用，但习惯上都称对象）“丢进”该容器中。从Java 5 增加了泛型（此处以后会有链接）以后，Java集合可以记住容器中对象的数据类型，使得编码更加简洁、健壮。
+  集合和数组的区别：  数组长度在初始化时指定，只能保存定长的数据。 集合可以保存数量不确定的数据 同时可以保存具有映射关系的数据 （即关联数据 键值对 key-value） 数组元素即可以是基本数据的值 也可以是对象 集合中只能保存对象（即对象的引用变量）基本数据类型要转换成对应的包装类才能放在在集合中。   集合之间的继承关系 Java的集合类主要由两个接口派生而出：Collection和Map,Collection和Map是Java集合框架的根接口。
+ArrayList,HashSet,LinkedList,TreeSet是经常用到的已实现的集合类。
+Map实现类用于保存具有映射关系的数据。Map保存的每项数据都是key-value对，也就是由key和value两个值组成。Map里的key是不可重复的，key用户标识集合里的每项数据。
+图中，HashMap，TreeMap是我们经常会用到的集合类。
+Collection 接口： 简介 Collection接口是Set,Queue,List的父接口。Collection接口中定义了多种方法可供其子类进行实现，以实现数据操作。
+ add 添加元素 addAll 添加所有元素到collection中 clear 清除collection中所有的元素 contains 如果collection中包含指定的元素 返回true equals 比较collection中包含的元素与指定元素是否相等 hashCode 返回collection的哈希值 isEmpty 如果collection中不包含元素 返回true iterator 返回在collection的元素上进行迭代的迭代器 remove 从此collection中移除指定元素的单个实例 removeAll 从此collection中所有的元素 retainAll 只保留此collection中那些包含制定collection的元素 size 返回collection中的元素数 toArray 返回包含此collection中所有元素的数组  可以看出Collection用法有：添加元素，删除元素，返回Collection集合的个数以及清空集合等。 其中重点介绍iterator()方法，该方法的返回值是Iterator。</description>
+    </item>
+    
+  </channel>
+</rss>

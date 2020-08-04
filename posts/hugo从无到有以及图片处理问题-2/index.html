@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="为什么选择hugo?  ​	因为也是刚刚开始搭建自己的博客，看了CodeSheep程序羊老哥以前介绍的hugo，是基于go语言写的，特点就是快，也符合我们当代年轻人的特点(😁)，另外就是搭建起来也很方便 简单几个命令，就可以看到成果，不至于半途而废。(另外google了一下为什么选择hugo？看看别人是怎么说的 机灵鬼.gif)
+​	第一点得提的就是Hugo 打出的标语 &amp;ndash; “The world’s fastest framework for building websites”。Hugo 依靠Go语言进行开发，号称世界上最快的构建网站工具，到底有多快？根据相关博主提供的数据，他200篇左右的博文用Hexo 需要10分钟去生成静态网页，而Hugo 只需要10秒。就我个人的体验来说，Hugo确实大大加快了网页生成的速度，平常增加一篇博文然后再生成渲染需要4秒左右，而Hugo基本上是1秒内完成。正是依赖于Hugo 快速生成的特点，调试方便成了Hugo的第二大特点。基本上我在源文件处修改的内容可以实时地显示在网页上，而不用再次敲代码生成再预览，这对于博主来说简直就是一个福音。
+放个链接 看看能不能说服你？
+hugo从0到1  ​	我建议和我一样的新手 不要直接google搜索 hugo搭建博客 因为有的时候 在别人那行得通 但是到自己这里不行 就会怀疑自己的能力，是不是自己太辣鸡，其实是有的时候写博客，只是为了自己记录一下，可能把有些步骤给省略了，但是官网不会啊，官网就是想让你都能完成，都来使用，所以步骤都会写的很清楚，所以我先把**官网**放在链接里，大家通过查阅文档，有问题了再来看我的博客，这样学习起来，自己的印象也会比较深。
+​	odk，废话不多说，我开始啦！（我的环境是macOS）
+No1 下载Hugo mac推荐是用homebrew 我后面会写homebrew的教程 这里先欠着哈  brew install hugo //使用brew下载hugo hugo version	//查看hugo版本 确定是否下载成功 看到这个就代表你成功下载了Hugo!!! 🎉🎉🎉
+No2 Hugo 创建一个博客 hugo new site xxx //xxx 是你文件的名字 hugo new site keda725.github.io 你就会发现Hugo在当前路径下创建了一个keda725.github.io的文件夹，可以看到Hugo为我们创建了一些文件，themes，date，static等。
+|- archetypes ：存放default.md，头文件格式 |- content ：content目录存放博客文章（markdown文件） |- data ：存放自定义模版，导入的toml文件（或json，yaml） |- layouts ：layouts目录存放的是网站的模板文件 |- static ：static目录存放图片，css等静态资源 |- themes ：存放网站主题文件 |- config." />
+<meta name="keywords" content=", Hugo" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98-2/" />
+
+
+    <title>
+        
+            Hugo从无到有以及图片处理问题 :: Be determined to have a great day and you will! 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.d1ea4af8fd04fb24a4f8b882ea54bd04eb245427ca4baf527c81a5dab071410b.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Hugo从无到有以及图片处理问题">
+<meta itemprop="description" content="为什么选择hugo?  ​	因为也是刚刚开始搭建自己的博客，看了CodeSheep程序羊老哥以前介绍的hugo，是基于go语言写的，特点就是快，也符合我们当代年轻人的特点(😁)，另外就是搭建起来也很方便 简单几个命令，就可以看到成果，不至于半途而废。(另外google了一下为什么选择hugo？看看别人是怎么说的 机灵鬼.gif)
+​	第一点得提的就是Hugo 打出的标语 &ndash; “The world’s fastest framework for building websites”。Hugo 依靠Go语言进行开发，号称世界上最快的构建网站工具，到底有多快？根据相关博主提供的数据，他200篇左右的博文用Hexo 需要10分钟去生成静态网页，而Hugo 只需要10秒。就我个人的体验来说，Hugo确实大大加快了网页生成的速度，平常增加一篇博文然后再生成渲染需要4秒左右，而Hugo基本上是1秒内完成。正是依赖于Hugo 快速生成的特点，调试方便成了Hugo的第二大特点。基本上我在源文件处修改的内容可以实时地显示在网页上，而不用再次敲代码生成再预览，这对于博主来说简直就是一个福音。
+放个链接 看看能不能说服你？
+hugo从0到1  ​	我建议和我一样的新手 不要直接google搜索 hugo搭建博客 因为有的时候 在别人那行得通 但是到自己这里不行 就会怀疑自己的能力，是不是自己太辣鸡，其实是有的时候写博客，只是为了自己记录一下，可能把有些步骤给省略了，但是官网不会啊，官网就是想让你都能完成，都来使用，所以步骤都会写的很清楚，所以我先把**官网**放在链接里，大家通过查阅文档，有问题了再来看我的博客，这样学习起来，自己的印象也会比较深。
+​	odk，废话不多说，我开始啦！（我的环境是macOS）
+No1 下载Hugo mac推荐是用homebrew 我后面会写homebrew的教程 这里先欠着哈  brew install hugo //使用brew下载hugo hugo version	//查看hugo版本 确定是否下载成功 看到这个就代表你成功下载了Hugo!!! 🎉🎉🎉
+No2 Hugo 创建一个博客 hugo new site xxx //xxx 是你文件的名字 hugo new site keda725.github.io 你就会发现Hugo在当前路径下创建了一个keda725.github.io的文件夹，可以看到Hugo为我们创建了一些文件，themes，date，static等。
+|- archetypes ：存放default.md，头文件格式 |- content ：content目录存放博客文章（markdown文件） |- data ：存放自定义模版，导入的toml文件（或json，yaml） |- layouts ：layouts目录存放的是网站的模板文件 |- static ：static目录存放图片，css等静态资源 |- themes ：存放网站主题文件 |- config.">
+<meta itemprop="datePublished" content="2020-08-04T22:55:58&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-04T22:55:58&#43;08:00" />
+<meta itemprop="wordCount" content="206">
+<meta itemprop="image" content="https://keda725.github.io/"/>
+
+
+
+<meta itemprop="keywords" content="Hugo," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://keda725.github.io/"/>
+
+<meta name="twitter:title" content="Hugo从无到有以及图片处理问题"/>
+<meta name="twitter:description" content="为什么选择hugo?  ​	因为也是刚刚开始搭建自己的博客，看了CodeSheep程序羊老哥以前介绍的hugo，是基于go语言写的，特点就是快，也符合我们当代年轻人的特点(😁)，另外就是搭建起来也很方便 简单几个命令，就可以看到成果，不至于半途而废。(另外google了一下为什么选择hugo？看看别人是怎么说的 机灵鬼.gif)
+​	第一点得提的就是Hugo 打出的标语 &ndash; “The world’s fastest framework for building websites”。Hugo 依靠Go语言进行开发，号称世界上最快的构建网站工具，到底有多快？根据相关博主提供的数据，他200篇左右的博文用Hexo 需要10分钟去生成静态网页，而Hugo 只需要10秒。就我个人的体验来说，Hugo确实大大加快了网页生成的速度，平常增加一篇博文然后再生成渲染需要4秒左右，而Hugo基本上是1秒内完成。正是依赖于Hugo 快速生成的特点，调试方便成了Hugo的第二大特点。基本上我在源文件处修改的内容可以实时地显示在网页上，而不用再次敲代码生成再预览，这对于博主来说简直就是一个福音。
+放个链接 看看能不能说服你？
+hugo从0到1  ​	我建议和我一样的新手 不要直接google搜索 hugo搭建博客 因为有的时候 在别人那行得通 但是到自己这里不行 就会怀疑自己的能力，是不是自己太辣鸡，其实是有的时候写博客，只是为了自己记录一下，可能把有些步骤给省略了，但是官网不会啊，官网就是想让你都能完成，都来使用，所以步骤都会写的很清楚，所以我先把**官网**放在链接里，大家通过查阅文档，有问题了再来看我的博客，这样学习起来，自己的印象也会比较深。
+​	odk，废话不多说，我开始啦！（我的环境是macOS）
+No1 下载Hugo mac推荐是用homebrew 我后面会写homebrew的教程 这里先欠着哈  brew install hugo //使用brew下载hugo hugo version	//查看hugo版本 确定是否下载成功 看到这个就代表你成功下载了Hugo!!! 🎉🎉🎉
+No2 Hugo 创建一个博客 hugo new site xxx //xxx 是你文件的名字 hugo new site keda725.github.io 你就会发现Hugo在当前路径下创建了一个keda725.github.io的文件夹，可以看到Hugo为我们创建了一些文件，themes，date，static等。
+|- archetypes ：存放default.md，头文件格式 |- content ：content目录存放博客文章（markdown文件） |- data ：存放自定义模版，导入的toml文件（或json，yaml） |- layouts ：layouts目录存放的是网站的模板文件 |- static ：static目录存放图片，css等静态资源 |- themes ：存放网站主题文件 |- config."/>
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-08-04 22:55:58 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/ 🐒</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#67a2c9;
+                   animation-duration:1s;">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://keda725.github.io/about/">ABOUT</a></li><li><a href="https://keda725.github.io/posts">BLOGS</a></li><li><a href="https://keda725.github.io/tags/">TAGS</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        One minute
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98-2/">Hugo从无到有以及图片处理问题</a>
+      </h1>
+
+      
+
+      <div class="post-content">
+        <h4 id="为什么选择hugo">为什么选择hugo?</h4>
+<hr>
+<p>​		因为也是刚刚开始搭建自己的博客，看了<a href="https://space.bilibili.com/384068749/">CodeSheep</a>程序羊老哥以前介绍的hugo，是基于go语言写的，特点就是快，也符合我们当代年轻人的特点(😁)，另外就是搭建起来也很方便 简单几个命令，就可以看到成果，不至于半途而废。(另外google了一下为什么选择hugo？看看别人是怎么说的 机灵鬼.gif)</p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/hugo%E5%AE%98%E7%BD%91%E6%88%AA%E5%9B%BE.png" alt="hugo官网截图"></p>
+<p>​		第一点得提的就是Hugo 打出的标语 &ndash; “The world’s fastest framework for building websites”。Hugo 依靠Go语言进行开发，号称世界上最快的构建网站工具，到底有多快？根据相关博主提供的数据，他200篇左右的博文用Hexo 需要10分钟去生成静态网页，而Hugo 只需要10秒。就我个人的体验来说，Hugo确实大大加快了网页生成的速度，平常增加一篇博文然后再生成渲染需要4秒左右，而Hugo基本上是1秒内完成。正是依赖于Hugo 快速生成的特点，调试方便成了Hugo的第二大特点。基本上我在源文件处修改的内容可以实时地显示在网页上，而不用再次敲代码生成再预览，这对于博主来说简直就是一个福音。</p>
+<p><strong><a href="https://sspai.com/post/59904">放个链接 看看能不能说服你？</a></strong></p>
+<h4 id="hugo从0到1">hugo从0到1</h4>
+<hr>
+<p>​		我建议和我一样的新手 不要直接google搜索 hugo搭建博客 因为有的时候 在别人那行得通 但是到自己这里不行 就会怀疑自己的能力，是不是自己太辣鸡，其实是有的时候写博客，只是为了自己记录一下，可能把有些步骤给省略了，但是官网不会啊，官网就是想让你都能完成，都来使用，所以步骤都会写的很清楚，所以我先把**<a href="https://gohugo.io/getting-started/quick-start/">官网</a>**放在链接里，大家通过查阅文档，有问题了再来看我的博客，这样学习起来，自己的印象也会比较深。</p>
+<p>​		odk，废话不多说，我开始啦！（我的环境是macOS）</p>
+<h5 id="no1-下载hugo-mac推荐是用homebrew-我后面会写homebrew的教程-这里先欠着哈">No1 下载Hugo mac推荐是用homebrew 我后面会写homebrew的教程 这里先欠着哈</h5>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">brew install hugo   //使用brew下载hugo
+hugo version				//查看hugo版本 确定是否下载成功
+</code></pre></div><p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/version.png" alt=""></p>
+<p>看到这个就代表你成功下载了Hugo!!! 🎉🎉🎉</p>
+<h5 id="no2-hugo-创建一个博客">No2 Hugo 创建一个博客</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">hugo new site xxx  //xxx 是你文件的名字
+
+hugo new site keda725.github.io
+</code></pre></div><p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/newsite.png" alt=""></p>
+<p>你就会发现Hugo在当前路径下创建了一个keda725.github.io的文件夹，可以看到Hugo为我们创建了一些文件，themes，date，static等。</p>
+<p>|- archetypes ：存放default.md，头文件格式
+|- content ：content目录存放博客文章（markdown文件）
+|- data ：存放自定义模版，导入的toml文件（或json，yaml）
+|- layouts ：layouts目录存放的是网站的模板文件
+|- static ：static目录存放图片，css等静态资源
+|- themes ：存放网站主题文件
+|- config.toml ：config.toml是网站的配置文件</p>
+<h5 id="no3-选择一个主题">No3 选择一个主题</h5>
+<hr>
+<p>强烈推荐<a href="https://themes.gohugo.io/hugo-theme-hello-friend-ng/">hello-friend-ng</a>这个主题，自认为是很赞的一个主题，当然看大家自己的选择喽，我下面的介绍以及图片问题的处理，都是根据这个主题来介绍的。</p>
+<p>注意，从现在开始到动作都是在keda725.github.io这个路径下的操作了，不要在～下面搞，还要复制粘贴一道，浪费时间！</p>
+<p>git的安装和使用 这里就先不说了，先放一个官方的<a href="https://git-scm.com/">文档链接</a>！</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">git clone https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng 
+</code></pre></div><p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/theme.png" alt=""></p>
+<p>这就说明主题下载成功啦 我们先启动一下hugo 看看效果，让自己也有点成就感！</p>
+<h5 id="no4-启动hugo">No4 启动Hugo</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">hugo server -t hello-friend-ng -D 
+</code></pre></div><ul>
+<li>-t是&ndash;theme的缩写 声明主题是hello-friend-ng</li>
+<li>-D是&ndash;buildDrafts的缩写  连草稿一同展示出来</li>
+</ul>
+<p>也可以在执行这一步之前把theme写入到config.toml中</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">echo <span style="color:#e6db74">&#39;theme = &#34;hello-friend-ng &#34;&#39;</span> &gt;&gt; config.toml
+</code></pre></div><p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/server.png" alt="server"></p>
+<p>然后在网址上输入http://localhost:1313/就可以看到在本地启动的hugo博客啦！</p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/hello.png" alt=""></p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/hello2.png" alt=""></p>
+<p>这个主题有白天和黑夜两种模式可以选择，默认是黑色的。</p>
+<p>做到这里我们只是把选择了一个主题和成功启动了hugo，那么接下来我们就开始一下我们的博客编写和配置啦！</p>
+<h5 id="no5-写一篇博客">No5 写一篇博客</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">hugo new posts/第一篇博客.md
+</code></pre></div><p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2.png" alt=""></p>
+<p>然后我们按住键盘的command win上应该是control 鼠标放在第一篇博客上 打开这个md文件</p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E5%8D%9A%E5%AE%A2.png" alt="博客"></p>
+<p>随便写两句 慢慢来！</p>
+<h5 id="no6-再次启动hugo">No6 再次启动hugo</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">hugo server -t hello-friend-ng -D
+</code></pre></div><p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E5%86%8D%E6%AC%A1%E5%90%AF%E5%8A%A8.png" alt=""></p>
+<p>发现并没有文章发不上来，不要慌，这是因为我们针对这个主题还没有配置主菜单。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">cd themes/hello-friend-ng/exampleSite/
+</code></pre></div><p>打开config.toml 可以用vscode 或者vim  添加如下内容后保存，然后把这个config.toml拷贝一份放在keda725.github.io文件夹下替换原有的config.toml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+   <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;blog&#34;</span>
+   <span style="color:#a6e22e">name</span>       = <span style="color:#e6db74">&#34;Blogs&#34;</span>
+   <span style="color:#a6e22e">url</span>        = <span style="color:#e6db74">&#34;/posts&#34;</span>
+
+ [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+   <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+   <span style="color:#a6e22e">name</span>       = <span style="color:#e6db74">&#34;Categories&#34;</span>
+   <span style="color:#a6e22e">url</span>        = <span style="color:#e6db74">&#34;/categories/&#34;</span>
+
+ [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+   <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+   <span style="color:#a6e22e">name</span>       = <span style="color:#e6db74">&#34;Tags&#34;</span>
+   <span style="color:#a6e22e">url</span>        = <span style="color:#e6db74">&#34;/tags/&#34;</span>
+
+</code></pre></div><p>然后重新启动hugo server</p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E9%85%8D%E7%BD%AE%E5%90%8E.png" alt=""></p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E9%85%8D%E7%BD%AE%E5%90%8E2.png" alt=""></p>
+<h3 id="如果想要插入图片在typora中是这样的">如果想要插入图片，在Typora中是这样的：</h3>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87.png" alt=""></p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%871.png" alt="插入图片2"></p>
+<p>我不知道我讲清楚没有 如有问题 可以加我微信TSKB1996</p>
+<h4 id="将博客部署在github上">将博客部署在GitHub上</h4>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" alt=""></p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E5%92%8Cgithub%E5%85%B3%E8%81%94.png" alt=""></p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E7%94%9F%E6%88%90public%E6%96%87%E4%BB%B6.png" alt="生成public文件"></p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/gitinit.png" alt="gitinit"></p>
+<p>初始化仓库的时候是在public上 我们上传的只是public这个文件夹</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">git init
+git remote add origin https<span style="color:#960050;background-color:#1e0010">:</span>//github.com/xxx/xxx.github.io.git //你的github名
+git commit -m <span style="color:#e6db74">&#34;xxx&#34;</span>  //你提交的信息
+git push -u origin master
+</code></pre></div><hr>
+<p>这就是所有的内容啦！！🎉🎉🎉</p>
+<p>剩余的一些个性化设置 就由你自己来完成啦！</p>
+<p>如果你还有问题 欢迎添加我的微信 或者你觉得我写的不错想请我喝杯茶🍵</p>
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --></p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+            <line x1="7" y1="7" x2="7" y2="7"></line>
+          </svg><span class="tag"><a href="https://keda725.github.io/tags/hugo/">Hugo</a></span>
+        </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        206 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        2020-08-04 22:55 &#43;0800
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98&amp;caption=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98&amp;canonicalUrl=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98&amp;body=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f&amp;media=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f;description=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f&amp;title=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98&amp;summary=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98&amp;source=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f&amp;resubmit=true&amp;title=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f;title=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98%20https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f&amp;t=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Hugo%e4%bb%8e%e6%97%a0%e5%88%b0%e6%9c%89%e4%bb%a5%e5%8f%8a%e5%9b%be%e7%89%87%e5%a4%84%e7%90%86%e9%97%ae%e9%a2%98&amp;url=https%3a%2f%2fkeda725.github.io%2fposts%2fhugo%25E4%25BB%258E%25E6%2597%25A0%25E5%2588%25B0%25E6%259C%2589%25E4%25BB%25A5%25E5%258F%258A%25E5%259B%25BE%25E7%2589%2587%25E5%25A4%2584%25E7%2590%2586%25E9%2597%25AE%25E9%25A2%2598-2%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h"></span>
+          <hr />
+        </div>
+
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://keda725.github.io/posts/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/">
+                <span class="button__icon">←</span>
+                <span class="button__text">CollectionMap由浅及深（一）</span>
+              </a>
+            </span>
+          
+
+          
+        </div>
+      </div>
+    
+
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            
+            <span> <a href="https://keda725.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>
