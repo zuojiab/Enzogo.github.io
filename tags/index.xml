@@ -6,19 +6,10 @@
     <description>Recent content in Tags on Be determined to have a great day and you will!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 04 Aug 2020 23:52:41 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 23:52:22 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://keda725.github.io/tags/hugo/</link>
-      <pubDate>Tue, 04 Aug 2020 23:52:41 +0800</pubDate>
-      
-      <guid>https://keda725.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>集合</title>
@@ -26,6 +17,15 @@
       <pubDate>Tue, 04 Aug 2020 23:52:22 +0800</pubDate>
       
       <guid>https://keda725.github.io/tags/%E9%9B%86%E5%90%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://keda725.github.io/tags/hugo/</link>
+      <pubDate>Tue, 04 Aug 2020 22:55:58 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

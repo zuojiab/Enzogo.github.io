@@ -125,111 +125,6 @@ net/lazyegg/maven/Hello/0.0.1-SNAPSHOT/Hello-0.0.1-SNAPSHOT.jar</p>
         </item>
         
         <item>
-            <title>Hugo从无到有以及图片处理问题</title>
-            <link>https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</link>
-            <pubDate>Tue, 04 Aug 2020 23:52:41 +0800</pubDate>
-            
-            <guid>https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</guid>
-            <description>为什么选择hugo? ​	因为也是刚刚开始搭建自己的博客，看了CodeSheep程序羊老哥以前介绍的hugo，是基于go语言写的，特点就是快，也符合我们当代年轻人的特点(😁)，另外就是搭建起来也很方便 简单几个命令，就可以看到成果，不至于半途而废。(另外google了一下为什么选择hugo？看看别人是怎么说的 机灵鬼.gif)
-​	第一点得提的就是Hugo 打出的标语 &amp;ndash; “The world’s fastest framework for building websites”。Hugo 依靠Go语言进行开发，号称世界上最快的构建网站工具，到底有多快？根据相关博主提供的数据，他200篇左右的博文用Hexo 需要10分钟去生成静态网页，而Hugo 只需要10秒。就我个人的体验来说，Hugo确实大大加快了网页生成的速度，平常增加一篇博文然后再生成渲染需要4秒左右，而Hugo基本上是1秒内完成。正是依赖于Hugo 快速生成的特点，调试方便成了Hugo的第二大特点。基本上我在源文件处修改的内容可以实时地显示在网页上，而不用再次敲代码生成再预览，这对于博主来说简直就是一个福音。
-放个链接 看看能不能说服你？
-hugo从0到1 ​	我建议和我一样的新手 不要直接google搜索 hugo搭建博客 因为有的时候 在别人那行得通 但是到自己这里不行 就会怀疑自己的能力，是不是自己太辣鸡，其实是有的时候写博客，只是为了自己记录一下，可能把有些步骤给省略了，但是官网不会啊，官网就是想让你都能完成，都来使用，所以步骤都会写的很清楚，所以我先把*官网放在链接里，大家通过查阅文档，有问题了再来看我的博客，这样学习起来，自己的印象也会比较深。*
-​	*odk，废话不多说，我开始啦！（我的环境是macOS）*
-*No1 下载Hugo mac推荐是用homebrew 我后面会写homebrew的教程 这里先欠着哈* brew install hugo //使用brew下载hugo hugo version //查看hugo版本 确定是否下载成功 hugo new site xxx //xxx 是你文件的名字 hugo new site keda725.github.io git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng hugo server -t hello-friend-ng -D echo &#39;theme = &amp;quot;hello-friend-ng &amp;quot;&#39; &amp;gt;&amp;gt; config.</description>
-            <content type="html"><![CDATA[<h4 id="为什么选择hugo">为什么选择hugo?</h4>
-<p>​		因为也是刚刚开始搭建自己的博客，看了<a href="https://space.bilibili.com/384068749/">CodeSheep</a>程序羊老哥以前介绍的hugo，是基于go语言写的，特点就是快，也符合我们当代年轻人的特点(😁)，另外就是搭建起来也很方便 简单几个命令，就可以看到成果，不至于半途而废。(另外google了一下为什么选择hugo？看看别人是怎么说的 机灵鬼.gif)</p>
-<p><img src="" alt="hugo官网截图"></p>
-<p>​		第一点得提的就是Hugo 打出的标语 &ndash; “The world’s fastest framework for building websites”。Hugo 依靠Go语言进行开发，号称世界上最快的构建网站工具，到底有多快？根据相关博主提供的数据，他200篇左右的博文用Hexo 需要10分钟去生成静态网页，而Hugo 只需要10秒。就我个人的体验来说，Hugo确实大大加快了网页生成的速度，平常增加一篇博文然后再生成渲染需要4秒左右，而Hugo基本上是1秒内完成。正是依赖于Hugo 快速生成的特点，调试方便成了Hugo的第二大特点。基本上我在源文件处修改的内容可以实时地显示在网页上，而不用再次敲代码生成再预览，这对于博主来说简直就是一个福音。</p>
-<p><strong><a href="https://sspai.com/post/59904">放个链接 看看能不能说服你？</a></strong></p>
-<h4 id="hugo从0到1"><strong>hugo从0到1</strong></h4>
-<p>​		<strong>我建议和我一样的新手 不要直接google搜索 hugo搭建博客 因为有的时候 在别人那行得通 但是到自己这里不行 就会怀疑自己的能力，是不是自己太辣鸡，其实是有的时候写博客，只是为了自己记录一下，可能把有些步骤给省略了，但是官网不会啊，官网就是想让你都能完成，都来使用，所以步骤都会写的很清楚，所以我先把*<em><a href="https://gohugo.io/getting-started/quick-start/">官网</a>放在链接里，大家通过查阅文档，有问题了再来看我的博客，这样学习起来，自己的印象也会比较深。*</em></strong></p>
-<p>​		<em><strong>*odk，废话不多说，我开始啦！（我的环境是macOS）*</strong></em></p>
-<h5 id="no1-下载hugo-mac推荐是用homebrew-我后面会写homebrew的教程-这里先欠着哈"><em><strong>*No1 下载Hugo mac推荐是用homebrew 我后面会写homebrew的教程 这里先欠着哈*</strong></em></h5>
-<pre><code>brew install hugo   //使用brew下载hugo
-hugo version        //查看hugo版本 确定是否下载成功
-hugo new site xxx  //xxx 是你文件的名字
-
-hugo new site keda725.github.io
-git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng 
-hugo server -t hello-friend-ng -D 
-echo 'theme = &quot;hello-friend-ng &quot;' &gt;&gt; config.toml
-hugo new posts/第一篇博客.md
-hugo server -t hello-friend-ng -D
-cd themes/hello-friend-ng/exampleSite/
-[[menu.main]]
-   identifier = &quot;blog&quot;
-   name       = &quot;Blogs&quot;
-   url        = &quot;/posts&quot;
-
- [[menu.main]]
-   identifier = &quot;categories&quot;
-   name       = &quot;Categories&quot;
-   url        = &quot;/categories/&quot;
-
- [[menu.main]]
-   identifier = &quot;tags&quot;
-   name       = &quot;Tags&quot;
-   url        = &quot;/tags/&quot;
-
-git init
-git remote add origin https://github.com/xxx/xxx.github.io.git //你的github名
-git commit -m &quot;xxx&quot;  //你提交的信息
-git push -u origin master
-</code></pre><p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<p><em><strong>*如果你还有问题 欢迎添加我的微信 或者你觉得我写的不错想请我喝杯茶🍵*</strong></em></p>
-<p><em><strong>*剩余的一些个性化设置 就由你自己来完成啦！*</strong></em></p>
-<p><em><strong>*这就是所有的内容啦！！🎉🎉🎉*</strong></em></p>
-<p><em><strong>*初始化仓库的时候是在public上 我们上传的只是public这个文件夹*</strong></em></p>
-<p><em><strong>*<img src="" alt="gitinit">*</strong></em></p>
-<p><em><strong>*<img src="" alt="生成public文件">*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<h4 id="将博客部署在github上"><em><strong>*将博客部署在GitHub上*</strong></em></h4>
-<p><em><strong>*我不知道我讲清楚没有 如有问题 可以加我微信TSKB1996*</strong></em></p>
-<p><em><strong>*<img src="" alt="插入图片2">*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<h3 id="如果想要插入图片在typora中是这样的"><em><strong>*如果想要插入图片，在Typora中是这样的：*</strong></em></h3>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<p><em><strong>*然后重新启动hugo server*</strong></em></p>
-<p><em><strong>*打开config.toml 可以用vscode 或者vim  添加如下内容后保存，然后把这个config.toml拷贝一份放在keda725.github.io文件夹下替换原有的config.toml*</strong></em></p>
-<p><em><strong>*发现并没有文章发不上来，不要慌，这是因为我们针对这个主题还没有配置主菜单。*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<h5 id="no6-再次启动hugo"><em><strong>*No6 再次启动hugo*</strong></em></h5>
-<p><em><strong>*随便写两句 慢慢来！*</strong></em></p>
-<p><em><strong>*<img src="" alt="博客">*</strong></em></p>
-<p><em><strong>*然后我们按住键盘的command win上应该是control 鼠标放在第一篇博客上 打开这个md文件*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<h5 id="no5-写一篇博客"><em><strong>*No5 写一篇博客*</strong></em></h5>
-<p><em><strong>*做到这里我们只是把选择了一个主题和成功启动了hugo，那么接下来我们就开始一下我们的博客编写和配置啦！*</strong></em></p>
-<p><em><strong>*这个主题有白天和黑夜两种模式可以选择，默认是黑色的。*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<p><em><strong>*然后在网址上输入http://localhost:1313/就可以看到在本地启动的hugo博客啦！*</strong></em></p>
-<p><em><strong>*<img src="" alt="server">*</strong></em></p>
-<p><em><strong>*也可以在执行这一步之前把theme写入到config.toml中*</strong></em></p>
-<ul>
-<li><em><strong>*-t是&ndash;theme的缩写 声明主题是hello-friend-ng*</strong></em></li>
-<li><em><strong>*-D是&ndash;buildDrafts的缩写  连草稿一同展示出来*</strong></em></li>
-</ul>
-<h5 id="no4-启动hugo"><em><strong>*No4 启动Hugo*</strong></em></h5>
-<p><em><strong>*这就说明主题下载成功啦 我们先启动一下hugo 看看效果，让自己也有点成就感！*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<p><em><strong>*git的安装和使用 这里就先不说了，先放一个官方的<a href="https://git-scm.com/">文档链接</a>！*</strong></em></p>
-<p><em><strong>*注意，从现在开始到动作都是在keda725.github.io这个路径下的操作了，不要在～下面搞，还要复制粘贴一道，浪费时间！*</strong></em></p>
-<p><em><strong>*强烈推荐<a href="https://themes.gohugo.io/hugo-theme-hello-friend-ng/">hello-friend-ng</a>这个主题，自认为是很赞的一个主题，当然看大家自己的选择喽，我下面的介绍以及图片问题的处理，都是根据这个主题来介绍的。*</strong></em></p>
-<h5 id="no3-选择一个主题"><em><strong>*No3 选择一个主题*</strong></em></h5>
-<p><em><strong>*|- archetypes ：存放default.md，头文件格式  |- content ：content目录存放博客文章（markdown文件）  |- data ：存放自定义模版，导入的toml文件（或json，yaml）  |- layouts ：layouts目录存放的是网站的模板文件  |- static ：static目录存放图片，css等静态资源  |- themes ：存放网站主题文件 |- config.toml ：config.toml是网站的配置文件*</strong></em></p>
-<p><em><strong>*你就会发现Hugo在当前路径下创建了一个keda725.github.io的文件夹，可以看到Hugo为我们创建了一些文件，themes，date，static等。*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-<h5 id="no2-hugo-创建一个博客"><em><strong>*No2 Hugo 创建一个博客*</strong></em></h5>
-<p><em><strong>*看到这个就代表你成功下载了Hugo!!! 🎉🎉🎉*</strong></em></p>
-<p><em><strong>*<img src="" alt="img">*</strong></em></p>
-]]></content>
-        </item>
-        
-        <item>
             <title>CollectionMap由浅及深（一）</title>
             <link>https://keda725.github.io/posts/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/</link>
             <pubDate>Tue, 04 Aug 2020 23:52:22 +0800</pubDate>
@@ -457,8 +352,8 @@ git push -u origin master
 <p>这就是所有的内容啦！！🎉🎉🎉</p>
 <p>剩余的一些个性化设置 就由你自己来完成啦！</p>
 <p>如果你还有问题 欢迎添加我的微信 或者你觉得我写的不错想请我喝杯茶🍵</p>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --></p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E4%BA%8C%E7%BB%B4%E7%A0%811.png" alt=""></p>
+<p><img src="/img/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/%E4%BA%8C%E7%BB%B4%E7%A0%812.png" alt=""></p>
 ]]></content>
         </item>
         

@@ -6,24 +6,10 @@
     <description>Recent content in Hugo on Be determined to have a great day and you will!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 04 Aug 2020 23:52:41 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 22:55:58 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hugo从无到有以及图片处理问题</title>
-      <link>https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Tue, 04 Aug 2020 23:52:41 +0800</pubDate>
-      
-      <guid>https://keda725.github.io/posts/hugo%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E4%BB%A5%E5%8F%8A%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</guid>
-      <description>为什么选择hugo? ​	因为也是刚刚开始搭建自己的博客，看了CodeSheep程序羊老哥以前介绍的hugo，是基于go语言写的，特点就是快，也符合我们当代年轻人的特点(😁)，另外就是搭建起来也很方便 简单几个命令，就可以看到成果，不至于半途而废。(另外google了一下为什么选择hugo？看看别人是怎么说的 机灵鬼.gif)
-​	第一点得提的就是Hugo 打出的标语 &amp;ndash; “The world’s fastest framework for building websites”。Hugo 依靠Go语言进行开发，号称世界上最快的构建网站工具，到底有多快？根据相关博主提供的数据，他200篇左右的博文用Hexo 需要10分钟去生成静态网页，而Hugo 只需要10秒。就我个人的体验来说，Hugo确实大大加快了网页生成的速度，平常增加一篇博文然后再生成渲染需要4秒左右，而Hugo基本上是1秒内完成。正是依赖于Hugo 快速生成的特点，调试方便成了Hugo的第二大特点。基本上我在源文件处修改的内容可以实时地显示在网页上，而不用再次敲代码生成再预览，这对于博主来说简直就是一个福音。
-放个链接 看看能不能说服你？
-hugo从0到1 ​	我建议和我一样的新手 不要直接google搜索 hugo搭建博客 因为有的时候 在别人那行得通 但是到自己这里不行 就会怀疑自己的能力，是不是自己太辣鸡，其实是有的时候写博客，只是为了自己记录一下，可能把有些步骤给省略了，但是官网不会啊，官网就是想让你都能完成，都来使用，所以步骤都会写的很清楚，所以我先把*官网放在链接里，大家通过查阅文档，有问题了再来看我的博客，这样学习起来，自己的印象也会比较深。*
-​	*odk，废话不多说，我开始啦！（我的环境是macOS）*
-*No1 下载Hugo mac推荐是用homebrew 我后面会写homebrew的教程 这里先欠着哈* brew install hugo //使用brew下载hugo hugo version //查看hugo版本 确定是否下载成功 hugo new site xxx //xxx 是你文件的名字 hugo new site keda725.github.io git clone https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng hugo server -t hello-friend-ng -D echo &#39;theme = &amp;quot;hello-friend-ng &amp;quot;&#39; &amp;gt;&amp;gt; config.</description>
-    </item>
     
     <item>
       <title>Hugo从无到有以及图片处理问题</title>
