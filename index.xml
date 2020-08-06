@@ -6,10 +6,195 @@
     <description>Recent content on Be determined to have a great day and you will!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 05 Aug 2020 13:26:39 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2020 17:08:20 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java之异常体系</title>
+      <link>https://keda725.github.io/posts/java%E4%B9%8B%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</link>
+      <pubDate>Thu, 06 Aug 2020 17:08:20 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E4%B9%8B%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</guid>
+      <description>异常入门与控制流 异常的类型体系 异常的栈轨迹 异常处理 </description>
+    </item>
+    
+    <item>
+      <title>Java之IO</title>
+      <link>https://keda725.github.io/posts/java%E4%B9%8Bio/</link>
+      <pubDate>Thu, 06 Aug 2020 17:03:38 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E4%B9%8Bio/</guid>
+      <description>计算机多级体系原理简介 文件的本质 输入 输出 Java的io 文件类File Java- nio </description>
+    </item>
+    
+    <item>
+      <title>Web前后端架构分析</title>
+      <link>https://keda725.github.io/posts/web%E5%89%8D%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90/</link>
+      <pubDate>Thu, 06 Aug 2020 16:59:38 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/web%E5%89%8D%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90/</guid>
+      <description>计算机网络架构与HTTP原理 使用Java发起http请求 使用Java解析html提取内容 同步与异步加载 http方法和状态码 http的header和body http协议实战 </description>
+    </item>
+    
+    <item>
+      <title>Collection体系原理与常用实现</title>
+      <link>https://keda725.github.io/posts/collection%E4%BD%93%E7%B3%BB%E5%8E%9F%E7%90%86%E4%B8%8E%E5%B8%B8%E7%94%A8%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Thu, 06 Aug 2020 16:57:58 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/collection%E4%BD%93%E7%B3%BB%E5%8E%9F%E7%90%86%E4%B8%8E%E5%B8%B8%E7%94%A8%E5%AE%9E%E7%8E%B0/</guid>
+      <description>Collection体系原理与常用实现 Map与常用实现 </description>
+    </item>
+    
+    <item>
+      <title>Maven包管理与maven初步</title>
+      <link>https://keda725.github.io/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86%E4%B8%8Emaven%E5%88%9D%E6%AD%A5/</link>
+      <pubDate>Thu, 06 Aug 2020 16:55:47 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86%E4%B8%8Emaven%E5%88%9D%E6%AD%A5/</guid>
+      <description>Java的包原理 Maven的包管理 包冲突及解决 maven的其它知识 </description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建个人博客</title>
+      <link>https://keda725.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Thu, 06 Aug 2020 16:54:22 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>Hugo搭建个人博客</description>
+    </item>
+    
+    <item>
+      <title>Git之远程仓库</title>
+      <link>https://keda725.github.io/posts/git%E4%B9%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Thu, 06 Aug 2020 16:50:09 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/git%E4%B9%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
+      <description>远程仓库 </description>
+    </item>
+    
+    <item>
+      <title>Git之本地仓库</title>
+      <link>https://keda725.github.io/posts/git%E4%B9%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/</link>
+      <pubDate>Thu, 06 Aug 2020 16:49:28 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/git%E4%B9%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/</guid>
+      <description>本地仓库 </description>
+    </item>
+    
+    <item>
+      <title>命令行</title>
+      <link>https://keda725.github.io/posts/%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
+      <pubDate>Thu, 06 Aug 2020 16:46:16 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/%E5%91%BD%E4%BB%A4%E8%A1%8C/</guid>
+      <description>命令行 命令行的历史 命令行如何启动 工作目录和环境变量 可执行程序 参数 Linux文件权限 输入与输出 Linux常见命令详解 使用命令行编译Java程序 Java中fork子进程 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（十一）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%8D%81%E4%B8%80/</link>
+      <pubDate>Thu, 06 Aug 2020 16:43:55 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%8D%81%E4%B8%80/</guid>
+      <description>面向对象：接口和抽象类 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（十）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%8D%81/</link>
+      <pubDate>Thu, 06 Aug 2020 16:42:22 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%8D%81/</guid>
+      <description>面向对象：多态 多态 策略模式 使用多态简化、重构代码 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（九）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B9%9D/</link>
+      <pubDate>Thu, 06 Aug 2020 16:38:54 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B9%9D/</guid>
+      <description>面向对象：组合与继承 继承的本质是避免重复 Java继承体系与Object中的常用方法 继承中的类结构和初始化顺序 实例方法的覆盖 设计模式：模版方法 向上_向下转型 final关键字 单例模式 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（八）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%85%AB/</link>
+      <pubDate>Thu, 06 Aug 2020 16:37:17 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%85%AB/</guid>
+      <description>Java对象系统基础 对象基本概念：成员与初始化 方法的重载 对象的初始化顺序 对象的生命周期 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（七）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%83/</link>
+      <pubDate>Thu, 06 Aug 2020 16:35:15 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%83/</guid>
+      <description>Java控制流 方法的控制流 while与do-while循环 for与foreach循环 break与continue switch语句 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（六）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%85%AD/</link>
+      <pubDate>Thu, 06 Aug 2020 16:33:03 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%85%AD/</guid>
+      <description>Java的运算系统 基本运算符 字增自减运算符 比较运算符 逻辑运算符与短路特性 三元运算符 位运算 运算符优先级与字符串加法操作 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（五）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%BA%94/</link>
+      <pubDate>Thu, 06 Aug 2020 16:31:52 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%BA%94/</guid>
+      <description>null与equals约定在数据类型中的应用 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（四）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%9B%9B/</link>
+      <pubDate>Thu, 06 Aug 2020 16:29:43 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%9B%9B/</guid>
+      <description>一、数据在计算机中是如何存储的？ 二、基本数据类型 三、类型转换与类型提升 四、基本数据类型对应的装箱类型 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（三）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%89/</link>
+      <pubDate>Thu, 06 Aug 2020 16:27:52 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%89/</guid>
+      <description>对象与引用 方法的传值VS传引用 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（二）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%BA%8C/</link>
+      <pubDate>Thu, 06 Aug 2020 16:24:45 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%BA%8C/</guid>
+      <description>一、方法 静态方法 静态成员变量 二、对象、构造器与成员变量 三、实例方法 四、空指针异常 五、包 类 静态方法 实例方法 静态成员 实力成员总结 </description>
+    </item>
+    
+    <item>
+      <title>Java基础（一）</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%80/</link>
+      <pubDate>Wed, 05 Aug 2020 23:07:08 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%80/</guid>
+      <description>Java
+ 强类型 静态语言  编译器可以帮你检查出绝大部分的问题
+String 是不可变的
+String s = &amp;ldquo;&amp;quot;;
+s += &amp;ldquo;1&amp;rdquo;; //意思是，在s字符串后面加上“1”后 创建一个新的字符串 把这个字符串的地址赋值给s变量 所以没有改变s字符串的数据 而是创建了一个新的字符串 并且把新的字符串的地址赋值为s变量
+ 一、Java语言的跨平台性 二、字节码概述 三、Java语言的基本单元&amp;mdash;类和包 四、包的意义 五、引用第三方包 </description>
+    </item>
     
     <item>
       <title>Linux之硬链接和符号链接</title>
@@ -40,7 +225,10 @@ InputStream
 就好像你在家里叫爸爸才能到对应到一个人
 但是你出们再乱叫爸爸 大家就会用异样的眼光看你
 相对的路径 相对的就是jvm进程的当前工作目录
-绝对路径就是 小明的爸爸</description>
+绝对路径就是 小明的爸爸
+经典的io模型是基于流的
+优点 容易理解 方便抽象 缺点 慢 必须一个一个的来
+nio 块 没有顺序</description>
     </item>
     
     <item>

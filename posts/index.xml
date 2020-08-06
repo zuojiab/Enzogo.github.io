@@ -5,8 +5,309 @@
         <description>Recent content in Posts on Be determined to have a great day and you will!</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-Hans</language>
-        <lastBuildDate>Wed, 05 Aug 2020 13:26:39 +0800</lastBuildDate>
+        <lastBuildDate>Thu, 06 Aug 2020 17:08:20 +0800</lastBuildDate>
         <atom:link href="https://keda725.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Java之异常体系</title>
+            <link>https://keda725.github.io/posts/java%E4%B9%8B%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</link>
+            <pubDate>Thu, 06 Aug 2020 17:08:20 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E4%B9%8B%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</guid>
+            <description>异常入门与控制流 异常的类型体系 异常的栈轨迹 异常处理 </description>
+            <content type="html"><![CDATA[<h4 id="异常入门与控制流">异常入门与控制流</h4>
+<h4 id="异常的类型体系">异常的类型体系</h4>
+<h4 id="异常的栈轨迹">异常的栈轨迹</h4>
+<h4 id="异常处理">异常处理</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java之IO</title>
+            <link>https://keda725.github.io/posts/java%E4%B9%8Bio/</link>
+            <pubDate>Thu, 06 Aug 2020 17:03:38 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E4%B9%8Bio/</guid>
+            <description>计算机多级体系原理简介 文件的本质 输入 输出 Java的io 文件类File Java- nio </description>
+            <content type="html"><![CDATA[<h4 id="计算机多级体系原理简介">计算机多级体系原理简介</h4>
+<h4 id="文件的本质">文件的本质</h4>
+<h4 id="输入-输出-java的io">输入 输出 Java的io</h4>
+<h4 id="文件类file">文件类File</h4>
+<h4 id="java--nio">Java- nio</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Web前后端架构分析</title>
+            <link>https://keda725.github.io/posts/web%E5%89%8D%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90/</link>
+            <pubDate>Thu, 06 Aug 2020 16:59:38 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/web%E5%89%8D%E5%90%8E%E7%AB%AF%E6%9E%B6%E6%9E%84%E5%88%86%E6%9E%90/</guid>
+            <description>计算机网络架构与HTTP原理 使用Java发起http请求 使用Java解析html提取内容 同步与异步加载 http方法和状态码 http的header和body http协议实战 </description>
+            <content type="html"><![CDATA[<h4 id="计算机网络架构与http原理">计算机网络架构与HTTP原理</h4>
+<h4 id="使用java发起http请求">使用Java发起http请求</h4>
+<h4 id="使用java解析html提取内容">使用Java解析html提取内容</h4>
+<h4 id="同步与异步加载">同步与异步加载</h4>
+<h4 id="http方法和状态码">http方法和状态码</h4>
+<h4 id="http的header和body">http的header和body</h4>
+<h4 id="http协议实战">http协议实战</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Collection体系原理与常用实现</title>
+            <link>https://keda725.github.io/posts/collection%E4%BD%93%E7%B3%BB%E5%8E%9F%E7%90%86%E4%B8%8E%E5%B8%B8%E7%94%A8%E5%AE%9E%E7%8E%B0/</link>
+            <pubDate>Thu, 06 Aug 2020 16:57:58 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/collection%E4%BD%93%E7%B3%BB%E5%8E%9F%E7%90%86%E4%B8%8E%E5%B8%B8%E7%94%A8%E5%AE%9E%E7%8E%B0/</guid>
+            <description>Collection体系原理与常用实现 Map与常用实现 </description>
+            <content type="html"><![CDATA[<h4 id="collection体系原理与常用实现">Collection体系原理与常用实现</h4>
+<h4 id="map与常用实现">Map与常用实现</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Maven包管理与maven初步</title>
+            <link>https://keda725.github.io/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86%E4%B8%8Emaven%E5%88%9D%E6%AD%A5/</link>
+            <pubDate>Thu, 06 Aug 2020 16:55:47 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/maven%E5%8C%85%E7%AE%A1%E7%90%86%E4%B8%8Emaven%E5%88%9D%E6%AD%A5/</guid>
+            <description>Java的包原理 Maven的包管理 包冲突及解决 maven的其它知识 </description>
+            <content type="html"><![CDATA[<h4 id="java的包原理">Java的包原理</h4>
+<h4 id="maven的包管理">Maven的包管理</h4>
+<h4 id="包冲突及解决">包冲突及解决</h4>
+<h4 id="maven的其它知识">maven的其它知识</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Hugo搭建个人博客</title>
+            <link>https://keda725.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+            <pubDate>Thu, 06 Aug 2020 16:54:22 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+            <description>Hugo搭建个人博客</description>
+            <content type="html"><![CDATA[<p>Hugo搭建个人博客</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Git之远程仓库</title>
+            <link>https://keda725.github.io/posts/git%E4%B9%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link>
+            <pubDate>Thu, 06 Aug 2020 16:50:09 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/git%E4%B9%8B%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid>
+            <description>远程仓库 </description>
+            <content type="html"><![CDATA[<h3 id="远程仓库">远程仓库</h3>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Git之本地仓库</title>
+            <link>https://keda725.github.io/posts/git%E4%B9%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/</link>
+            <pubDate>Thu, 06 Aug 2020 16:49:28 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/git%E4%B9%8B%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/</guid>
+            <description>本地仓库 </description>
+            <content type="html"><![CDATA[<h3 id="本地仓库">本地仓库</h3>
+]]></content>
+        </item>
+        
+        <item>
+            <title>命令行</title>
+            <link>https://keda725.github.io/posts/%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
+            <pubDate>Thu, 06 Aug 2020 16:46:16 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/%E5%91%BD%E4%BB%A4%E8%A1%8C/</guid>
+            <description>命令行 命令行的历史 命令行如何启动 工作目录和环境变量 可执行程序 参数 Linux文件权限 输入与输出 Linux常见命令详解 使用命令行编译Java程序 Java中fork子进程 </description>
+            <content type="html"><![CDATA[<h3 id="命令行">命令行</h3>
+<h4 id="命令行的历史">命令行的历史</h4>
+<h4 id="命令行如何启动">命令行如何启动</h4>
+<h4 id="工作目录和环境变量">工作目录和环境变量</h4>
+<h4 id="可执行程序">可执行程序</h4>
+<h4 id="参数">参数</h4>
+<h4 id="linux文件权限">Linux文件权限</h4>
+<h4 id="输入与输出">输入与输出</h4>
+<h4 id="linux常见命令详解">Linux常见命令详解</h4>
+<h4 id="使用命令行编译java程序">使用命令行编译Java程序</h4>
+<h4 id="java中fork子进程">Java中fork子进程</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（十一）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%8D%81%E4%B8%80/</link>
+            <pubDate>Thu, 06 Aug 2020 16:43:55 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%8D%81%E4%B8%80/</guid>
+            <description>面向对象：接口和抽象类 </description>
+            <content type="html"><![CDATA[<h3 id="面向对象接口和抽象类">面向对象：接口和抽象类</h3>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（十）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%8D%81/</link>
+            <pubDate>Thu, 06 Aug 2020 16:42:22 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%8D%81/</guid>
+            <description>面向对象：多态 多态 策略模式 使用多态简化、重构代码 </description>
+            <content type="html"><![CDATA[<h3 id="面向对象多态">面向对象：多态</h3>
+<h4 id="多态">多态</h4>
+<h4 id="策略模式">策略模式</h4>
+<h4 id="使用多态简化重构代码">使用多态简化、重构代码</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（九）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B9%9D/</link>
+            <pubDate>Thu, 06 Aug 2020 16:38:54 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B9%9D/</guid>
+            <description>面向对象：组合与继承 继承的本质是避免重复 Java继承体系与Object中的常用方法 继承中的类结构和初始化顺序 实例方法的覆盖 设计模式：模版方法 向上_向下转型 final关键字 单例模式 </description>
+            <content type="html"><![CDATA[<h3 id="面向对象组合与继承">面向对象：组合与继承</h3>
+<h4 id="继承的本质是避免重复">继承的本质是避免重复</h4>
+<h4 id="java继承体系与object中的常用方法">Java继承体系与Object中的常用方法</h4>
+<h4 id="继承中的类结构和初始化顺序">继承中的类结构和初始化顺序</h4>
+<h4 id="实例方法的覆盖">实例方法的覆盖</h4>
+<h4 id="设计模式模版方法">设计模式：模版方法</h4>
+<h4 id="向上_向下转型">向上_向下转型</h4>
+<h4 id="final关键字">final关键字</h4>
+<h4 id="单例模式">单例模式</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（八）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%85%AB/</link>
+            <pubDate>Thu, 06 Aug 2020 16:37:17 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%85%AB/</guid>
+            <description>Java对象系统基础 对象基本概念：成员与初始化 方法的重载 对象的初始化顺序 对象的生命周期 </description>
+            <content type="html"><![CDATA[<h3 id="java对象系统基础">Java对象系统基础</h3>
+<h4 id="对象基本概念成员与初始化">对象基本概念：成员与初始化</h4>
+<h4 id="方法的重载">方法的重载</h4>
+<h4 id="对象的初始化顺序">对象的初始化顺序</h4>
+<h4 id="对象的生命周期">对象的生命周期</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（七）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%83/</link>
+            <pubDate>Thu, 06 Aug 2020 16:35:15 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%83/</guid>
+            <description>Java控制流 方法的控制流 while与do-while循环 for与foreach循环 break与continue switch语句 </description>
+            <content type="html"><![CDATA[<h3 id="java控制流">Java控制流</h3>
+<h4 id="方法的控制流">方法的控制流</h4>
+<h4 id="while与do-while循环">while与do-while循环</h4>
+<h4 id="for与foreach循环">for与foreach循环</h4>
+<h4 id="break与continue">break与continue</h4>
+<h4 id="switch语句">switch语句</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（六）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%85%AD/</link>
+            <pubDate>Thu, 06 Aug 2020 16:33:03 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%85%AD/</guid>
+            <description>Java的运算系统 基本运算符 字增自减运算符 比较运算符 逻辑运算符与短路特性 三元运算符 位运算 运算符优先级与字符串加法操作 </description>
+            <content type="html"><![CDATA[<h3 id="java的运算系统">Java的运算系统</h3>
+<h4 id="基本运算符">基本运算符</h4>
+<h4 id="字增自减运算符">字增自减运算符</h4>
+<h4 id="比较运算符">比较运算符</h4>
+<h4 id="逻辑运算符与短路特性">逻辑运算符与短路特性</h4>
+<h4 id="三元运算符">三元运算符</h4>
+<h4 id="位运算">位运算</h4>
+<h4 id="运算符优先级与字符串加法操作">运算符优先级与字符串加法操作</h4>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（五）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%BA%94/</link>
+            <pubDate>Thu, 06 Aug 2020 16:31:52 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%BA%94/</guid>
+            <description>null与equals约定在数据类型中的应用 </description>
+            <content type="html"><![CDATA[<h3 id="null与equals约定在数据类型中的应用">null与equals约定在数据类型中的应用</h3>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（四）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%9B%9B/</link>
+            <pubDate>Thu, 06 Aug 2020 16:29:43 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E5%9B%9B/</guid>
+            <description>一、数据在计算机中是如何存储的？ 二、基本数据类型 三、类型转换与类型提升 四、基本数据类型对应的装箱类型 </description>
+            <content type="html"><![CDATA[<h3 id="一数据在计算机中是如何存储的">一、数据在计算机中是如何存储的？</h3>
+<h3 id="二基本数据类型">二、基本数据类型</h3>
+<h3 id="三类型转换与类型提升">三、类型转换与类型提升</h3>
+<h3 id="四基本数据类型对应的装箱类型">四、基本数据类型对应的装箱类型</h3>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（三）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%89/</link>
+            <pubDate>Thu, 06 Aug 2020 16:27:52 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%89/</guid>
+            <description>对象与引用 方法的传值VS传引用 </description>
+            <content type="html"><![CDATA[<h3 id="对象与引用">对象与引用</h3>
+<h3 id="方法的传值vs传引用">方法的传值VS传引用</h3>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（二）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%BA%8C/</link>
+            <pubDate>Thu, 06 Aug 2020 16:24:45 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%BA%8C/</guid>
+            <description>一、方法 静态方法 静态成员变量 二、对象、构造器与成员变量 三、实例方法 四、空指针异常 五、包 类 静态方法 实例方法 静态成员 实力成员总结 </description>
+            <content type="html"><![CDATA[<h3 id="一方法-静态方法-静态成员变量">一、方法 静态方法 静态成员变量</h3>
+<h3 id="二对象构造器与成员变量">二、对象、构造器与成员变量</h3>
+<h3 id="三实例方法">三、实例方法</h3>
+<h3 id="四空指针异常">四、空指针异常</h3>
+<h3 id="五包-类-静态方法-实例方法-静态成员-实力成员总结">五、包 类 静态方法 实例方法 静态成员 实力成员总结</h3>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Java基础（一）</title>
+            <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%80/</link>
+            <pubDate>Wed, 05 Aug 2020 23:07:08 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%80/</guid>
+            <description>Java
+ 强类型 静态语言  编译器可以帮你检查出绝大部分的问题
+String 是不可变的
+String s = &amp;ldquo;&amp;quot;;
+s += &amp;ldquo;1&amp;rdquo;; //意思是，在s字符串后面加上“1”后 创建一个新的字符串 把这个字符串的地址赋值给s变量 所以没有改变s字符串的数据 而是创建了一个新的字符串 并且把新的字符串的地址赋值为s变量
+ 一、Java语言的跨平台性 二、字节码概述 三、Java语言的基本单元&amp;mdash;类和包 四、包的意义 五、引用第三方包 </description>
+            <content type="html"><![CDATA[<p>Java</p>
+<ul>
+<li>强类型</li>
+<li>静态语言</li>
+</ul>
+<p>编译器可以帮你检查出绝大部分的问题</p>
+<p>String 是不可变的</p>
+<p>String s = &ldquo;&quot;;</p>
+<p>s += &ldquo;1&rdquo;; //意思是，在s字符串后面加上“1”后 创建一个新的字符串 把这个字符串的地址赋值给s变量 所以没有改变s字符串的数据 而是创建了一个新的字符串 并且把新的字符串的地址赋值为s变量</p>
+<hr>
+<h3 id="一java语言的跨平台性">一、Java语言的跨平台性</h3>
+<h3 id="二字节码概述">二、字节码概述</h3>
+<h3 id="三java语言的基本单元---类和包">三、Java语言的基本单元&mdash;类和包</h3>
+<h3 id="四包的意义">四、包的意义</h3>
+<h3 id="五引用第三方包">五、引用第三方包</h3>
+]]></content>
+        </item>
         
         <item>
             <title>Linux之硬链接和符号链接</title>
@@ -74,7 +375,10 @@ InputStream
 就好像你在家里叫爸爸才能到对应到一个人
 但是你出们再乱叫爸爸 大家就会用异样的眼光看你
 相对的路径 相对的就是jvm进程的当前工作目录
-绝对路径就是 小明的爸爸</description>
+绝对路径就是 小明的爸爸
+经典的io模型是基于流的
+优点 容易理解 方便抽象 缺点 慢 必须一个一个的来
+nio 块 没有顺序</description>
             <content type="html"><![CDATA[<p>文件的本质就是一段字节流</p>
 <p>一个字节有8个位</p>
 <p>为什么两个两个来读字节？  bcd编码 8421</p>
@@ -95,6 +399,9 @@ InputStream
 <p>但是你出们再乱叫爸爸 大家就会用异样的眼光看你</p>
 <p>相对的路径 相对的就是jvm进程的当前工作目录</p>
 <p>绝对路径就是 小明的爸爸</p>
+<p>经典的io模型是基于流的</p>
+<p>优点 容易理解 方便抽象  缺点 慢  必须一个一个的来</p>
+<p>nio 块 没有顺序</p>
 ]]></content>
         </item>
         
