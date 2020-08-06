@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Java基础 on -&gt; rm -f xx - &gt; go home and die</title>
+    <title>Java基础 on Do Some Great!</title>
     <link>https://keda725.github.io/tags/java%E5%9F%BA%E7%A1%80/</link>
-    <description>Recent content in Java基础 on -&gt; rm -f xx - &gt; go home and die</description>
+    <description>Recent content in Java基础 on Do Some Great!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 05 Aug 2020 23:07:08 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/tags/java%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +14,10 @@
     
     <item>
       <title>Java基础之Java的跨平台性/类/包</title>
-      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%80/</link>
+      <link>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8Bjava%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%80%A7/%E7%B1%BB/%E5%8C%85/</link>
       <pubDate>Wed, 05 Aug 2020 23:07:08 +0800</pubDate>
       
-      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%80/</guid>
+      <guid>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8Bjava%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%80%A7/%E7%B1%BB/%E5%8C%85/</guid>
       <description>一、Java的跨平台性的一个比喻  ​	一次开发，在所有的机器上都能够跑起来，不管是Windows Linux Mac，在每个操作装有JVM虚拟机，是他帮你做了翻译的事情。
 ​	每个国家都有自己的语言 为了让别人听懂你讲什么 你在每个国家找了一个懂这个语言的人 你只需要发布一个说明书 每个国家看懂说明书的人 就能根据这说明书 把你的话翻译成这个国家人能听懂的语言 这个人就是JVM 说明书就是字节码(ByteCode)。
 二、嘛是字节码？  ​	Java具有跨平台特性，为了实现这个特性Java执行在一台虚拟机上，这个虚拟机就是JVM，Java通过JVM屏蔽了不同平台上之间的差异，从而做到一次编译，处处执行。

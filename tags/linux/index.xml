@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on -&gt; rm -f xx - &gt; go home and die</title>
+    <title>Linux on Do Some Great!</title>
     <link>https://keda725.github.io/tags/linux/</link>
-    <description>Recent content in Linux on -&gt; rm -f xx - &gt; go home and die</description>
+    <description>Recent content in Linux on Do Some Great!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 05 Aug 2020 13:26:39 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +14,10 @@
     
     <item>
       <title>Linux之硬链接和符号链接</title>
-      <link>https://keda725.github.io/posts/linux%E4%B9%8B%E7%A1%AC%E9%93%BE%E6%8E%A5%E5%92%8C%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5/</link>
+      <link>https://keda725.github.io/posts/2020/08/linux%E4%B9%8B%E7%A1%AC%E9%93%BE%E6%8E%A5%E5%92%8C%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5/</link>
       <pubDate>Wed, 05 Aug 2020 13:26:39 +0800</pubDate>
       
-      <guid>https://keda725.github.io/posts/linux%E4%B9%8B%E7%A1%AC%E9%93%BE%E6%8E%A5%E5%92%8C%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5/</guid>
+      <guid>https://keda725.github.io/posts/2020/08/linux%E4%B9%8B%E7%A1%AC%E9%93%BE%E6%8E%A5%E5%92%8C%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5/</guid>
       <description>从下面的现象中看有什么不同的地方？  mkdir ln //创建ln文件夹 cd ln	//进入到ln中 touch file1 //创建file1文件 ln file1 file2 //创建file1的一个硬链接文件file2 ln -s file1 file3 //创建file1的一个符号文件file3 ls -li //-i参数显示文件的inode索引节点号 echo &amp;#34;I am file1&amp;#34; &amp;gt;&amp;gt; file1 // 写入“”中的文字到file1 cat file1 //查看file1 cat file2 //查看file3 cat file3 //查看file3 rm -f file1 //强制删除file1 cat file2 //查看file2 cat file3 //查看file3 从上面的现象可以看出：当删除原始文件file1之后 硬链接file2不受影响 但是符号链接file3文件无效
 Linux链接概念  硬链接(Hard Link)  硬链接通过索引节点来进行连接，在linux文件系统中，保存在磁盘分区中的文件不管是什么类型的都会被分配到一个编号 成为索引节点号(Inode Index)，在linux中 多个文件名指向同一个索引节点是存在的，一般这种连接就是硬链接。硬链接的作用是允许一个文件拥有多个有效路径名，这样用户就可以建立硬链接到重要文件，以防止误删的功能。只删除一个连接并不影响索引节点本身和其它链接。只有当最后一个链接被删除后，文件的数据块及目录才会被释放，也就是说，文件真正删除的条件是与之相关的所有硬链接文件均被删除。   符号链接(Symbolic Link)  也叫软链接，软链接文件有点像Windows中的快捷方式。实际上是一个特殊的文件。在符号链接中，文件实际上是一个文本文件，其中包含的有另一个文件的位置信息。    不知道你发现了什么没有？🤷‍♂️</description>
     </item>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>集合 on -&gt; rm -f xx - &gt; go home and die</title>
+    <title>集合 on Do Some Great!</title>
     <link>https://keda725.github.io/tags/%E9%9B%86%E5%90%88/</link>
-    <description>Recent content in 集合 on -&gt; rm -f xx - &gt; go home and die</description>
+    <description>Recent content in 集合 on Do Some Great!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 04 Aug 2020 23:52:22 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/tags/%E9%9B%86%E5%90%88/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +14,10 @@
     
     <item>
       <title>CollectionMap由浅及深（一）</title>
-      <link>https://keda725.github.io/posts/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/</link>
+      <link>https://keda725.github.io/posts/2020/08/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/</link>
       <pubDate>Tue, 04 Aug 2020 23:52:22 +0800</pubDate>
       
-      <guid>https://keda725.github.io/posts/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/</guid>
+      <guid>https://keda725.github.io/posts/2020/08/collectionmap%E7%94%B1%E6%B5%85%E5%8F%8A%E6%B7%B1%E4%B8%80/</guid>
       <description>Collection、Map由浅及深（一） Java集合类介绍： Java集合大致可以分为Set、List、Queue和Map四种体系
   Set代表无序、不可重复的集合；
   List代表有序、重复的集合；
