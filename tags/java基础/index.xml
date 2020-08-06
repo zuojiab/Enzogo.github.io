@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java基础 on -&gt; rm -f xx - &gt; go home and die</title>
+    <link>https://keda725.github.io/tags/java%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in Java基础 on -&gt; rm -f xx - &gt; go home and die</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Wed, 05 Aug 2020 23:07:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://keda725.github.io/tags/java%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java基础之Java的跨平台性/类/包</title>
+      <link>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%80/</link>
+      <pubDate>Wed, 05 Aug 2020 23:07:08 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/java%E5%9F%BA%E7%A1%80%E4%B8%80/</guid>
+      <description>一、Java的跨平台性的一个比喻  ​	一次开发，在所有的机器上都能够跑起来，不管是Windows Linux Mac，在每个操作装有JVM虚拟机，是他帮你做了翻译的事情。
+​	每个国家都有自己的语言 为了让别人听懂你讲什么 你在每个国家找了一个懂这个语言的人 你只需要发布一个说明书 每个国家看懂说明书的人 就能根据这说明书 把你的话翻译成这个国家人能听懂的语言 这个人就是JVM 说明书就是字节码(ByteCode)。
+二、嘛是字节码？  ​	Java具有跨平台特性，为了实现这个特性Java执行在一台虚拟机上，这个虚拟机就是JVM，Java通过JVM屏蔽了不同平台上之间的差异，从而做到一次编译，处处执行。
+​	JVM位于Java编译器和OS平台之间，Java编译器只需要面向JVM，生成JVM能够理解的代码，这个代码就是字节码，JVM再把字节码翻译成真实机器能够理解的二进制机器码。
+三、Java语言的基本单元&amp;mdash;类和包  类  public class Cat { //类名是Cat  // 这就是一个类 } //class定义结束 要求：
+ 类名必须是英文字母开头，后接字母 数字和下划线的组合  习惯以大写字母开头   好的类命名(见名知意)  getClass(获取class) saveGithubPullRequestsToCSV(保存GitHub的pr到csv文件) isEmpty(判断是不是空)    为什么存在包这个东西？   在菜鸟网站上关于包(package)的第一句话是：
+​	为了更好的组织类，Java提供了包机制，用来区别类名的命名空间。
+ Java包这个机制是为了防止命名冲突，访问控制，提供搜索和定位类 接口 枚举 注释等。举个例子
+package com.keda725; public class Main { } public class Main { } 这两个类的区别在于哪里？好像是没有区别，那么可以直接在同一位置创建两个这样的java文件嘛？答案是否定的，那么这实际上是怎么创建两个内容上一样的文件的呢？</description>
+    </item>
+    
+  </channel>
+</rss>
