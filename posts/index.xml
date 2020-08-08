@@ -6,8 +6,40 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-Hans</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Thu, 06 Aug 2020 17:08:20 +0800</lastBuildDate>
+        <lastBuildDate>Sat, 08 Aug 2020 22:56:58 +0800</lastBuildDate>
         <atom:link href="https://keda725.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>身边美好的风景2020/8/8</title>
+            <link>https://keda725.github.io/posts/2020/08/%E8%BA%AB%E8%BE%B9%E7%BE%8E%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%99%AF2020/8/8/</link>
+            <pubDate>Sat, 08 Aug 2020 22:56:58 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/2020/08/%E8%BA%AB%E8%BE%B9%E7%BE%8E%E5%A5%BD%E7%9A%84%E9%A3%8E%E6%99%AF2020/8/8/</guid>
+            <description>哈哈 太久没怎么拍过街上的风景啦，今天也是兴趣来了拍了几张，记录一下身边美好😁
+ps：确实没有挑出来很多，也就这四张比较满意🎉🎉🎉
+ 一个投篮机就是他们的世界
+ 什么时候我也能这么潮？
+ 办活动的小姐姐被围着一通拍～
+ 舞台上的人即使是黑白配色也是光彩照人
+ 这样的照片小集合 应该未来还有。</description>
+            <content type="html"><![CDATA[<p>哈哈 太久没怎么拍过街上的风景啦，今天也是兴趣来了拍了几张，记录一下身边美好😁</p>
+<p>ps：确实没有挑出来很多，也就这四张比较满意🎉🎉🎉</p>
+<hr>
+<p>一个投篮机就是他们的世界</p>
+<p><img src="/img/%E4%BB%8A%E6%97%A5%E8%BA%AB%E8%BE%B9%E7%BE%8E%E5%A5%BD/4.png" alt="天真的小孩子"></p>
+<hr>
+<p>什么时候我也能这么潮？</p>
+<p><img src="/img/%E4%BB%8A%E6%97%A5%E8%BA%AB%E8%BE%B9%E7%BE%8E%E5%A5%BD/3.png" alt="街头"></p>
+<hr>
+<p>办活动的小姐姐被围着一通拍～</p>
+<p><img src="/img/%E4%BB%8A%E6%97%A5%E8%BA%AB%E8%BE%B9%E7%BE%8E%E5%A5%BD/2.png" alt="蹭拍"></p>
+<hr>
+<p>舞台上的人即使是黑白配色也是光彩照人</p>
+<p><img src="/img/%E4%BB%8A%E6%97%A5%E8%BA%AB%E8%BE%B9%E7%BE%8E%E5%A5%BD/1.png" alt="舞台上的人"></p>
+<hr>
+<p>这样的照片小集合 应该未来还有。</p>
+]]></content>
+        </item>
         
         <item>
             <title>Java之异常体系</title>
@@ -271,8 +303,32 @@
             <pubDate>Thu, 06 Aug 2020 16:24:45 +0800</pubDate>
             
             <guid>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%BA%8C/</guid>
-            <description>一、方法 静态方法 静态成员变量 二、对象、构造器与成员变量 三、实例方法 四、空指针异常 五、包 类 静态方法 实例方法 静态成员 实力成员总结 </description>
+            <description>一、方法 静态方法 静态成员变量  方法：语句的集合，他们一起执行一个功能  方法是解决一类问题的步骤的有序集合 方法包含在类或者对象中 方法在程序中被创建 在其它地方被引用  实例方法/类方法：实例方法和类方法也分别称为非静态方法和静态方法。 //静态方法 static void doRightMethod() {} //非静态方法 void doBadMethod() {}   调用类的静态方法时，这个类的实例可能不存在，因此不允许与从静态方法内部引用实例变量
+  ？？？ 没懂这句话什么意思      二、对象、构造器与成员变量 三、实例方法 四、空指针异常 五、包 类 静态方法 实例方法 静态成员 实力成员总结 </description>
             <content type="html"><![CDATA[<h3 id="一方法-静态方法-静态成员变量">一、方法 静态方法 静态成员变量</h3>
+<hr>
+<h4 id="方法语句的集合他们一起执行一个功能">方法：语句的集合，他们一起执行一个功能</h4>
+<ul>
+<li>方法是解决一类问题的步骤的有序集合</li>
+<li>方法包含在类或者对象中</li>
+<li>方法在程序中被创建 在其它地方被引用</li>
+</ul>
+<h4 id="实例方法类方法实例方法和类方法也分别称为非静态方法和静态方法">实例方法/类方法：实例方法和类方法也分别称为非静态方法和静态方法。</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//静态方法
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doRightMethod</span><span style="color:#f92672">()</span> <span style="color:#f92672">{}</span>
+<span style="color:#75715e">//非静态方法
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doBadMethod</span><span style="color:#f92672">()</span> <span style="color:#f92672">{}</span>
+</code></pre></div><ul>
+<li>
+<p>调用类的静态方法时，这个类的实例可能不存在，因此不允许与从静态方法内部引用实例变量</p>
+<ul>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#960050;background-color:#1e0010">？？？</span> 没懂这句话什么意思
+</code></pre></div></li>
+<li></li>
+</ul>
+</li>
+</ul>
 <h3 id="二对象构造器与成员变量">二、对象、构造器与成员变量</h3>
 <h3 id="三实例方法">三、实例方法</h3>
 <h3 id="四空指针异常">四、空指针异常</h3>
