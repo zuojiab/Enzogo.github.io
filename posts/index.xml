@@ -90,41 +90,35 @@ package com.github.zuojiabin; public class Home { Cat cat; Cat cat1; public stat
 <li>
 <p>深拷贝</p>
 <ul>
-<li>
-<p>深拷贝会拷贝所有的属性，并且拷贝属性指向的动态分配类型，当对象和它所引用的对象一起拷贝时就是发生深拷贝。</p>
-</li>
-<li>
-<p>深拷贝相比于浅拷贝 速度较慢并且花销比较大。</p>
-</li>
-<li>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"></code></pre></div></li>
+<li>深拷贝会拷贝所有的属性，并且拷贝属性指向的动态分配类型，当对象和它所引用的对象一起拷贝时就是发生深拷贝。</li>
+<li>深拷贝相比于浅拷贝 速度较慢并且花销比较大。</li>
 </ul>
-<p>package com.github.zuojiabin;</p>
-<p>public class Copy {
-public static void main(String[] args) {
-Home home = new Home();
-Cat cat = new Cat();
-cat.name = &ldquo;布宜诺斯艾利斯&rdquo;;
-home.cat = cat;
-Home copy = copy(home);</p>
-<pre><code>  }
-
-  static Home copy(Home home) {
-      Home newHome = new Home();
-      Cat newCat = new Cat();
-      String newName = home.cat.name;
-
-      newHome.cat = newCat;
-      newCat.name = newName;
-      return newHome;
-  }
-</code></pre>
-<p>}</p>
-<pre><code>
-* ![3](/img/Java基础之对象与引用/3.png)
-
-* ![4](/img/Java基础之对象与引用/4.png)</code></pre></li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.github.zuojiabin<span style="color:#f92672">;</span>
+  
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Copy</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Home home <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Home<span style="color:#f92672">();</span>
+        Cat cat <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cat<span style="color:#f92672">();</span>
+        cat<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;布宜诺斯艾利斯&#34;</span><span style="color:#f92672">;</span>
+        home<span style="color:#f92672">.</span><span style="color:#a6e22e">cat</span> <span style="color:#f92672">=</span> cat<span style="color:#f92672">;</span>
+        Home copy <span style="color:#f92672">=</span> copy<span style="color:#f92672">(</span>home<span style="color:#f92672">);</span>
+  
+    <span style="color:#f92672">}</span>
+  
+    <span style="color:#66d9ef">static</span> Home <span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>Home home<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Home newHome <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Home<span style="color:#f92672">();</span>
+        Cat newCat <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cat<span style="color:#f92672">();</span>
+        String newName <span style="color:#f92672">=</span> home<span style="color:#f92672">.</span><span style="color:#a6e22e">cat</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">;</span>
+  
+        newHome<span style="color:#f92672">.</span><span style="color:#a6e22e">cat</span> <span style="color:#f92672">=</span> newCat<span style="color:#f92672">;</span>
+        newCat<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> newName<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> newHome<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><img src="/img/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%BC%95%E7%94%A8/3.png" alt="3"></p>
+</li>
 </ul>
+<p><img src="/img/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%BC%95%E7%94%A8/4.png" alt="4"></p>
 ]]></content>
         </item>
         

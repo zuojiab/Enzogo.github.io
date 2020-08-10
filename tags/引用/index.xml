@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>引用 on Do Some Great!</title>
+    <link>https://keda725.github.io/tags/%E5%BC%95%E7%94%A8/</link>
+    <description>Recent content in 引用 on Do Some Great!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 10 Aug 2020 16:27:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://keda725.github.io/tags/%E5%BC%95%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java基础之对象与引用</title>
+      <link>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%BC%95%E7%94%A8/</link>
+      <pubDate>Mon, 10 Aug 2020 16:27:52 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%BC%95%E7%94%A8/</guid>
+      <description>在开始之前 我们先创建一个场景 然后对这个场景进行抽象
+package com.github.zuojiabin; public class Home { Cat cat; Cat cat1; public static void main(String[] args) { //1  Home home = new Home(); //2  Cat mimi = new Cat(); //3  mimi.name = &amp;#34;咪咪&amp;#34;; //4  home.cat = mimi; //5  home.cat1 = mimi; } } package com.github.zuojiabin; public class Cat{ public String name; } 对象与引用 引用很难理解 也可以叫做地址 引用就是地址 地址就是引用
+在创建过程中，以上面的代码为例子：
+创建了两个东西 一个是Home，一个是Cat
+在Home中有有两个东西 一个叫cat，一个叫cat1，他们的地址都是null
+在执行到4和5的时候，只是把mimi猫的地址指向了Cat,并不是创建了两只猫，在内存空间中只有一只猫</description>
+    </item>
+    
+  </channel>
+</rss>
