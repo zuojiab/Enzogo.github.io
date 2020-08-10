@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 10 Aug 2020 16:27:52 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 21:26:37 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java经典问题 传值还是传引用</title>
+      <link>https://keda725.github.io/posts/2020/08/java%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98-%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/</link>
+      <pubDate>Mon, 10 Aug 2020 21:26:37 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/2020/08/java%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98-%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/</guid>
+      <description>Java方法调用到底是传值还是传引用？  Java中到底是值传递还是引用传递呢？答案是值传递，Java中没有引用传递这个概念。
+ 数据类型和内存分配 Java中大概可以分为两大数据类型
+  基本数据类型
+  byte short int long float double char boolean 八大数据类型
+  基本数据类型的内存分配是在栈上完成的 也就是JVM的虚拟机
+  int i = 1; // 会在虚拟机栈上分配四个字节的空间出来存放       引用数据类型
+  引用类型有类 接口 数组以及null
+  User user = new User(); 会经历三个步骤：
+1、声明一个引用变量user，在虚拟机栈上分配空间。
+2、使用new关键字创建对象实例，在堆上分哦诶空间存放对象的属性信息。
+3、将堆上的对象链接到user变量上，所以栈上存储的实际上就是存的对象在堆上的地址信息。
+  数组对象也是一样的，栈上存放了一个地址，只想堆上实际分配的数组空间，实际的值是存放在堆上的。
+      基本类型 ​	8种基本类型作为方法参数传递时，传的是什么(实参)，方法接受的就是什么(形参)。传递过去的是1，接收到的就是1.穿过去的是true，接收到的就是true。
+package com.github.zuojiabin; public class passByValueOrRef { public static void main(String[] args) { int oldIntValue = 1; System.</description>
+    </item>
     
     <item>
       <title>Java基础之对象与引用</title>
