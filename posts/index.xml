@@ -396,14 +396,121 @@ ps：确实没有挑出来很多，也就这四张比较满意🎉🎉🎉
         </item>
         
         <item>
-            <title>Java基础（三）</title>
-            <link>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B8%89/</link>
+            <title>Java基础之对象与引用</title>
+            <link>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%BC%95%E7%94%A8/</link>
             <pubDate>Thu, 06 Aug 2020 16:27:52 +0800</pubDate>
             
-            <guid>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B8%89/</guid>
-            <description>对象与引用 方法的传值VS传引用 </description>
-            <content type="html"><![CDATA[<h3 id="对象与引用">对象与引用</h3>
-<h3 id="方法的传值vs传引用">方法的传值VS传引用</h3>
+            <guid>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%BC%95%E7%94%A8/</guid>
+            <description>在开始之前 我们先创建一个场景 然后对这个场景进行抽象
+package com.github.zuojiabin; public class Home { Cat cat; Cat cat1; public static void main(String[] args) { //1  Home home = new Home(); //2  Cat mimi = new Cat(); //3  mimi.name = &amp;#34;咪咪&amp;#34;; //4  home.cat = mimi; //5  home.cat1 = mimi; } } package com.github.zuojiabin; public class Cat{ public String name; } 对象与引用 引用很难理解 也可以叫做地址 引用就是地址 地址就是引用
+在创建过程中，以上面的代码为例子：
+创建了两个东西 一个是Home，一个是Cat
+在Home中有有两个东西 一个叫cat，一个叫cat1，他们的地址都是null
+在执行到4和5的时候，只是把mimi猫的地址指向了Cat,并不是创建了两只猫，在内存空间中只有一只猫</description>
+            <content type="html"><![CDATA[<p>在开始之前 我们先创建一个场景 然后对这个场景进行抽象</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.github.zuojiabin<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Home</span> <span style="color:#f92672">{</span>
+  Cat cat<span style="color:#f92672">;</span>
+  Cat cat1<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">//1
+</span><span style="color:#75715e"></span>    Home home <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Home<span style="color:#f92672">();</span>
+    <span style="color:#75715e">//2
+</span><span style="color:#75715e"></span>    Cat mimi <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cat<span style="color:#f92672">();</span>
+    <span style="color:#75715e">//3
+</span><span style="color:#75715e"></span>    mimi<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;咪咪&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#75715e">//4
+</span><span style="color:#75715e"></span>    home<span style="color:#f92672">.</span><span style="color:#a6e22e">cat</span> <span style="color:#f92672">=</span> mimi<span style="color:#f92672">;</span>
+    <span style="color:#75715e">//5
+</span><span style="color:#75715e"></span>    home<span style="color:#f92672">.</span><span style="color:#a6e22e">cat1</span> <span style="color:#f92672">=</span> mimi<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.github.zuojiabin<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span><span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">public</span> String name<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="对象与引用">对象与引用</h3>
+<p>引用很难理解 也可以叫做地址 引用就是地址 地址就是引用</p>
+<p>在创建过程中，以上面的代码为例子：</p>
+<p>创建了两个东西 一个是Home，一个是Cat</p>
+<p>在Home中有有两个东西 一个叫cat，一个叫cat1，他们的地址都是null</p>
+<p>在执行到4和5的时候，只是把mimi猫的地址指向了Cat,并不是创建了两只猫，在内存空间中只有一只猫</p>
+<h4 id="拷贝问题">拷贝问题</h4>
+<ul>
+<li>
+<p>浅拷贝</p>
+<ul>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.github.zuojiabin<span style="color:#f92672">;</span>
+    
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Copy</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Home home <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Home<span style="color:#f92672">();</span>
+        Cat cat <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cat<span style="color:#f92672">();</span>
+        cat<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;布宜诺斯艾利斯&#34;</span><span style="color:#f92672">;</span>
+        home<span style="color:#f92672">.</span><span style="color:#a6e22e">cat</span> <span style="color:#f92672">=</span> cat<span style="color:#f92672">;</span>
+        Home copy <span style="color:#f92672">=</span> copy<span style="color:#f92672">(</span>home<span style="color:#f92672">);</span>
+    
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#66d9ef">static</span> Home <span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>Home home<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Home newHome <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Home<span style="color:#f92672">();</span>
+        newHome<span style="color:#f92672">.</span><span style="color:#a6e22e">cat</span> <span style="color:#f92672">=</span> home<span style="color:#f92672">.</span><span style="color:#a6e22e">cat</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> newHome<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></li>
+<li>
+<p><img src="/img/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%BC%95%E7%94%A8/1.png" alt="1"></p>
+</li>
+<li>
+<p><img src="/img/Java%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%BC%95%E7%94%A8/2.png" alt="2"></p>
+</li>
+<li>
+<p>只是拷贝了这个类，但是并没有把这个类包含的数据拷贝过来，拷贝的只是内存地址。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>深拷贝</p>
+<ul>
+<li>
+<p>深拷贝会拷贝所有的属性，并且拷贝属性指向的动态分配类型，当对象和它所引用的对象一起拷贝时就是发生深拷贝。</p>
+</li>
+<li>
+<p>深拷贝相比于浅拷贝 速度较慢并且花销比较大。</p>
+</li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"></code></pre></div></li>
+</ul>
+<p>package com.github.zuojiabin;</p>
+<p>public class Copy {
+public static void main(String[] args) {
+Home home = new Home();
+Cat cat = new Cat();
+cat.name = &ldquo;布宜诺斯艾利斯&rdquo;;
+home.cat = cat;
+Home copy = copy(home);</p>
+<pre><code>  }
+
+  static Home copy(Home home) {
+      Home newHome = new Home();
+      Cat newCat = new Cat();
+      String newName = home.cat.name;
+
+      newHome.cat = newCat;
+      newCat.name = newName;
+      return newHome;
+  }
+</code></pre>
+<p>}</p>
+<pre><code>
+* ![3](/img/Java基础之对象与引用/3.png)
+
+* ![4](/img/Java基础之对象与引用/4.png)</code></pre></li>
+</ul>
 ]]></content>
         </item>
         
