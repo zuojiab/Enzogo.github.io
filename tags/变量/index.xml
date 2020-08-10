@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>变量 on Do Some Great!</title>
+    <link>https://keda725.github.io/tags/%E5%8F%98%E9%87%8F/</link>
+    <description>Recent content in 变量 on Do Some Great!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 10 Aug 2020 14:24:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://keda725.github.io/tags/%E5%8F%98%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java基础之方法、构造器、实例方法、变量</title>
+      <link>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%96%B9%E6%B3%95%E6%9E%84%E9%80%A0%E5%99%A8%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Mon, 10 Aug 2020 14:24:45 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%96%B9%E6%B3%95%E6%9E%84%E9%80%A0%E5%99%A8%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%E5%8F%98%E9%87%8F/</guid>
+      <description>一、方法  方法：语句的集合，他们一起执行一个功能  方法是解决一类问题的步骤的有序集合 方法包含在类或者对象中 方法在程序中被创建 在其它地方被引用  二、构造器 构造器：   package com.github.zuojiabin; public class Main { public static void main(String[] args) { Cat cat = new Cat(); cat.name = &amp;#34;喵&amp;#34;; Cat cat1 = new Cat(&amp;#34;喵喵&amp;#34;); } }   package com.github.zuojiabin; public class Cat { //成员变量  public String name; //静态成员变量 不和任何对象相绑定  //static int i  //假如没有声明任何的constructor 构造器  //编译器会自动帮你生成一个  // &amp;lt;init&amp;gt;  //Cat() {}  //假如你写了下面的有参数的构造方法 那编译器就不会帮你生成，并且在你创建cat实例的时候  //如果你没有传入参数的时候 编译器会报错  public Cat() { } public Cat(String name){ this.</description>
+    </item>
+    
+  </channel>
+</rss>
