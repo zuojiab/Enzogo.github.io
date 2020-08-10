@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 08 Aug 2020 22:56:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 14:24:45 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java基础之方法 变量</title>
+      <link>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%96%B9%E6%B3%95-%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Mon, 10 Aug 2020 14:24:45 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B9%8B%E6%96%B9%E6%B3%95-%E5%8F%98%E9%87%8F/</guid>
+      <description>一、方法  方法：语句的集合，他们一起执行一个功能  方法是解决一类问题的步骤的有序集合 方法包含在类或者对象中 方法在程序中被创建 在其它地方被引用  二、构造器 构造器：   package com.github.zuojiabin; public class Main { public static void main(String[] args) { Cat cat = new Cat(); cat.name = &amp;#34;喵&amp;#34;; Cat cat1 = new Cat(&amp;#34;喵喵&amp;#34;); } }   package com.github.zuojiabin; public class Cat { //成员变量  public String name; //静态成员变量 不和任何对象相绑定  //static int i  //假如没有声明任何的constructor 构造器  //编译器会自动帮你生成一个  // &amp;lt;init&amp;gt;  //Cat() {}  //假如你写了下面的有参数的构造方法 那编译器就不会帮你生成，并且在你创建cat实例的时候  //如果你没有传入参数的时候 编译器会报错  public Cat() { } public Cat(String name){ this.</description>
+    </item>
     
     <item>
       <title>身边美好的风景2020/8/8</title>
@@ -178,16 +187,6 @@ ps：确实没有挑出来很多，也就这四张比较满意🎉🎉🎉
       
       <guid>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%B8%89/</guid>
       <description>对象与引用 方法的传值VS传引用 </description>
-    </item>
-    
-    <item>
-      <title>Java基础（二）</title>
-      <link>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%BA%8C/</link>
-      <pubDate>Thu, 06 Aug 2020 16:24:45 +0800</pubDate>
-      
-      <guid>https://keda725.github.io/posts/2020/08/java%E5%9F%BA%E7%A1%80%E4%BA%8C/</guid>
-      <description>一、方法 静态方法 静态成员变量  方法：语句的集合，他们一起执行一个功能  方法是解决一类问题的步骤的有序集合 方法包含在类或者对象中 方法在程序中被创建 在其它地方被引用  实例方法/类方法：实例方法和类方法也分别称为非静态方法和静态方法。 //静态方法 static void doRightMethod() {} //非静态方法 void doBadMethod() {}   调用类的静态方法时，这个类的实例可能不存在，因此不允许与从静态方法内部引用实例变量
-  ？？？ 没懂这句话什么意思      二、对象、构造器与成员变量 三、实例方法 四、空指针异常 五、包 类 静态方法 实例方法 静态成员 实力成员总结 </description>
     </item>
     
     <item>
