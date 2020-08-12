@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 10 Aug 2020 21:26:37 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2020 21:16:04 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/tags/java%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>原生数据类型和引用数据类型</title>
+      <link>https://keda725.github.io/posts/2020/08/%E5%8E%9F%E7%94%9F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 12 Aug 2020 21:16:04 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/2020/08/%E5%8E%9F%E7%94%9F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+      <description>基本数据类型  只要能找到对应的类，就是引用数据类型 否则就是原生数据类型 byte - 1个字节 -128～127
+short - 2个字节
+int - 4个字节 21亿
+long - 8个字节
+float - 4个字节 是小数 在计算机中的近似表示 是非准确的 不能对浮点数进行相等的操作
+double -8个字节 Math.abs来判断浮点数
+char - 2个字节
+boolean - true -false
+void ？ 也是一种类型 有
+int a = 1; byte b = (byte)128; long c = 22_0000_0000L; float d = 0.1f; double e = 1e-7; int f = 0x11; //十六进制的17 int g = 0b1010101; 类型提升  byte 0000 0101</description>
+    </item>
     
     <item>
       <title>Java经典问题 传值还是传引用</title>
