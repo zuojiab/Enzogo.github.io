@@ -6,8 +6,218 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-Hans</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 10 Aug 2020 21:26:37 +0800</lastBuildDate>
+        <lastBuildDate>Wed, 12 Aug 2020 21:16:04 +0800</lastBuildDate>
         <atom:link href="https://keda725.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>原生数据类型和引用数据类型</title>
+            <link>https://keda725.github.io/posts/2020/08/%E5%8E%9F%E7%94%9F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+            <pubDate>Wed, 12 Aug 2020 21:16:04 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/2020/08/%E5%8E%9F%E7%94%9F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+            <description>基本数据类型  只要能找到对应的类，就是引用数据类型 否则就是原生数据类型 byte - 1个字节 -128～127
+short - 2个字节
+int - 4个字节 21亿
+long - 8个字节
+float - 4个字节 是小数 在计算机中的近似表示 是非准确的 不能对浮点数进行相等的操作
+double -8个字节 Math.abs来判断浮点数
+char - 2个字节
+boolean - true -false
+void ？ 也是一种类型 有
+int a = 1; byte b = (byte)128; long c = 22_0000_0000L; float d = 0.1f; double e = 1e-7; int f = 0x11; //十六进制的17 int g = 0b1010101; 类型提升  byte 0000 0101</description>
+            <content type="html"><![CDATA[<h4 id="基本数据类型">基本数据类型</h4>
+<hr>
+<h5 id="只要能找到对应的类就是引用数据类型-否则就是原生数据类型">只要能找到对应的类，就是引用数据类型 否则就是原生数据类型</h5>
+<p>byte - 1个字节       -128～127</p>
+<p>short - 2个字节</p>
+<p>int - 4个字节            21亿</p>
+<p>long - 8个字节</p>
+<p>float - 4个字节           是小数 在计算机中的<strong>近似表示</strong> 是非准确的   不能对浮点数进行相等的操作</p>
+<p>double -8个字节             Math.abs来判断浮点数</p>
+<p>char - 2个字节</p>
+<p>boolean - true -false</p>
+<p>void ？ 也是一种类型  有</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">byte</span> b <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">)</span>128<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">long</span> c <span style="color:#f92672">=</span> 22_0000_0000L<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> d <span style="color:#f92672">=</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">1f</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">double</span> e <span style="color:#f92672">=</span> 1e<span style="color:#f92672">-</span>7<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> f <span style="color:#f92672">=</span> 0x11<span style="color:#f92672">;</span>   <span style="color:#75715e">//十六进制的17
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> g <span style="color:#f92672">=</span> 0b1010101<span style="color:#f92672">;</span>   
+
+</code></pre></div><h4 id="类型提升">类型提升</h4>
+<hr>
+<p>byte          														            0000 0101</p>
+<p>int             0000 0000 | 0000 0000 | 0000 0000 | 0000 0101</p>
+<p>从byte -&gt; int  可以直接进行</p>
+<p>但是从int到byte  就需要舍弃一些位 所以需要强制转换</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">double</span> result <span style="color:#f92672">=</span> divide<span style="color:#f92672">(</span>3<span style="color:#f92672">,</span> 2<span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;result = &#34;</span> <span style="color:#f92672">+</span> result<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">divide</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> a <span style="color:#f92672">/</span> b<span style="color:#f92672">;</span>  <span style="color:#75715e">// int result = 1.0 * a / b;  
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>     <span style="color:#75715e">// return (double) a / b;
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">result <span style="color:#f92672">=</span> 1<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span>
+</code></pre></div><p>整数除法是地板除  两个整数的除法还是整数 如果类型不同的话 需要提到最高精度上来进行计算</p>
+<h4 id="基本数据类型的装箱类">基本数据类型的装箱类</h4>
+<hr>
+<ul>
+<li>
+<p>byte      	Byte</p>
+</li>
+<li>
+<p>short     	Short</p>
+</li>
+<li>
+<p>int          	Integer</p>
+</li>
+<li>
+<p>long       	Long</p>
+</li>
+<li>
+<p>float       	Float</p>
+</li>
+<li>
+<p>double   	Double</p>
+</li>
+<li>
+<p>char       	 Character</p>
+</li>
+<li>
+<p>boolean     Boolean</p>
+</li>
+</ul>
+<h5 id="原生数据类型-永远都是数据本身">原生数据类型 永远都是数据本身</h5>
+<h5 id="引用-永远都是一个地址-存放在堆中">引用 永远都是一个地址 存放在堆中</h5>
+<p>int i = 100;</p>
+<p>Integer  i1 = new Integer(100);</p>
+<h6 id="为什么需要引用数据类型">为什么需要引用数据类型？</h6>
+<ul>
+<li>容器类不接受原生数据类型</li>
+<li>可以赋值为null</li>
+<li>提供额外的方法</li>
+<li>自动装箱与拆箱</li>
+</ul>
+<h4 id="原生类型和引用类型带来的坑">原生类型和引用类型带来的坑</h4>
+<ul>
+<li>对null拆箱讲引发空指针异常
+<ul>
+<li>Integer i = null;  -&gt; java.lang.NullPointerException</li>
+</ul>
+</li>
+<li>==与equals约定
+<ul>
+<li>int a = 5; int b = 5; sout a==b?        true
+<ul>
+<li>因为int是基本数据类型 比较的就是a b 的值</li>
+</ul>
+</li>
+<li>Integer a = 5; Integer b = 5; sout a==b?   false
+<ul>
+<li>Integer a = 5；这行代码 虚拟机自动的帮你创建了一个对象 a是一个地址的名称比如a是509 b是512  用==比较 比较的是地址的内容是不是一样的 显然509 != 512</li>
+</ul>
+</li>
+<li>用equals来比较引用数据类型的值是不是相等的</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.github.zuojiabin<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Integer a <span style="color:#f92672">=</span> 128<span style="color:#f92672">;</span>
+        Integer b <span style="color:#f92672">=</span> 128<span style="color:#f92672">;</span>
+
+        Integer c <span style="color:#f92672">=</span> 127<span style="color:#f92672">;</span>
+        Integer d <span style="color:#f92672">=</span> 127<span style="color:#f92672">;</span>
+
+        isEqual<span style="color:#f92672">(</span>a<span style="color:#f92672">,</span>b<span style="color:#f92672">);</span>
+        isEqual<span style="color:#f92672">(</span>c<span style="color:#f92672">,</span>d<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">isEqual</span><span style="color:#f92672">(</span>Integer integer1<span style="color:#f92672">,</span> Integer integer2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>integer1 <span style="color:#f92672">==</span> integer2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>integer1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; == &#34;</span> <span style="color:#f92672">+</span> integer2<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>integer1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; != &#34;</span> <span style="color:#f92672">+</span> integer2<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>integer1<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>integer2<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>integer1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; equals &#34;</span> <span style="color:#f92672">+</span> integer2<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>integer1 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; not equals &#34;</span> <span style="color:#f92672">+</span> integer2<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>这是因为什么呢？</p>
+<p>翻看Integer源码 发现一个IntegerCache方法，这是Java 5中引入的一个有助于节省内存，提高性能的特性。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Cache to support the object identity semantics of autoboxing for values between
+</span><span style="color:#75715e">     * -128 and 127 (inclusive) as required by JLS.
+</span><span style="color:#75715e">     *
+</span><span style="color:#75715e">     * The cache is initialized on first usage.  The size of the cache
+</span><span style="color:#75715e">     * may be controlled by the {@code -XX:AutoBoxCacheMax=&lt;size&gt;} option.
+</span><span style="color:#75715e">     * During VM initialization, java.lang.Integer.IntegerCache.high property
+</span><span style="color:#75715e">     * may be set and saved in the private system properties in the
+</span><span style="color:#75715e">     * sun.misc.VM class.
+</span><span style="color:#75715e">     */</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">IntegerCache</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> low <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>128<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> high<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> Integer cache<span style="color:#f92672">[];</span>
+
+        <span style="color:#66d9ef">static</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">// high value may be configured by property
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> h <span style="color:#f92672">=</span> 127<span style="color:#f92672">;</span>
+            String integerCacheHighPropValue <span style="color:#f92672">=</span>
+                sun<span style="color:#f92672">.</span><span style="color:#a6e22e">misc</span><span style="color:#f92672">.</span><span style="color:#a6e22e">VM</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getSavedProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java.lang.Integer.IntegerCache.high&#34;</span><span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>integerCacheHighPropValue <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> parseInt<span style="color:#f92672">(</span>integerCacheHighPropValue<span style="color:#f92672">);</span>
+                    i <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>i<span style="color:#f92672">,</span> 127<span style="color:#f92672">);</span>
+                    <span style="color:#75715e">// Maximum array size is Integer.MAX_VALUE
+</span><span style="color:#75715e"></span>                    h <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">min</span><span style="color:#f92672">(</span>i<span style="color:#f92672">,</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_VALUE</span> <span style="color:#f92672">-</span> <span style="color:#f92672">(-</span>low<span style="color:#f92672">)</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span><span style="color:#f92672">(</span> NumberFormatException nfe<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#75715e">// If the property cannot be parsed into an int, ignore it.
+</span><span style="color:#75715e"></span>                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+            high <span style="color:#f92672">=</span> h<span style="color:#f92672">;</span>
+
+            cache <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">[(</span>high <span style="color:#f92672">-</span> low<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">];</span>
+            <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> low<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;</span> cache<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> k<span style="color:#f92672">++)</span>
+                cache<span style="color:#f92672">[</span>k<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Integer<span style="color:#f92672">(</span>j<span style="color:#f92672">++);</span>
+
+            <span style="color:#75715e">// range [-128, 127] must be interned (JLS7 5.1.7)
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">assert</span> IntegerCache<span style="color:#f92672">.</span><span style="color:#a6e22e">high</span> <span style="color:#f92672">&gt;=</span> 127<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">IntegerCache</span><span style="color:#f92672">()</span> <span style="color:#f92672">{}</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><p>cache[] 就是Integer常量池。常量池的大小为一个字节(-128~127)</p>
+<p>当创建Integer对象时，不使用new Integer语句，大小在-128~127之间，对象存放在Integer常量池中</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>计算机是如何存储数据的</title>
+            <link>https://keda725.github.io/posts/2020/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E7%9A%84/</link>
+            <pubDate>Wed, 12 Aug 2020 18:15:37 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/2020/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E7%9A%84/</guid>
+            <description>计算机是如何存储数据的？
+二进制是计算机世界的基石
+所有的数据都是以字节存储的</description>
+            <content type="html"><![CDATA[<p>计算机是如何存储数据的？</p>
+<p>二进制是计算机世界的基石</p>
+<p>所有的数据都是以字节存储的</p>
+]]></content>
+        </item>
         
         <item>
             <title>Java经典问题 传值还是传引用</title>

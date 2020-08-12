@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://keda725.github.io/</loc>
-    <lastmod>2020-08-10T21:26:37+08:00</lastmod>
+    <lastmod>2020-08-12T21:16:04+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -15,6 +15,41 @@
                 hreflang="en"
                 href="https://keda725.github.io/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://keda725.github.io/posts/</loc>
+    <lastmod>2020-08-12T21:16:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keda725.github.io/tags/</loc>
+    <lastmod>2020-08-12T21:16:04+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://keda725.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://keda725.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://keda725.github.io/tags/untagged/</loc>
+    <lastmod>2020-08-12T21:16:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keda725.github.io/posts/2020/08/%E5%8E%9F%E7%94%9F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
+    <lastmod>2020-08-12T21:16:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keda725.github.io/posts/2020/08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%98%AF%E5%A6%82%E4%BD%95%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E7%9A%84/</loc>
+    <lastmod>2020-08-12T18:15:37+08:00</lastmod>
   </url>
   
   <url>
@@ -30,26 +65,6 @@
   <url>
     <loc>https://keda725.github.io/posts/2020/08/java%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98-%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/</loc>
     <lastmod>2020-08-10T21:26:37+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keda725.github.io/posts/</loc>
-    <lastmod>2020-08-10T21:26:37+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://keda725.github.io/tags/</loc>
-    <lastmod>2020-08-10T21:26:37+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://keda725.github.io/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://keda725.github.io/tags/"
-                />
   </url>
   
   <url>
