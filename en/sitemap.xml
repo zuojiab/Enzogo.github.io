@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://keda725.github.io/</loc>
-    <lastmod>2020-08-12T21:16:04+08:00</lastmod>
+    <lastmod>2020-08-14T19:55:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -19,17 +19,22 @@
   
   <url>
     <loc>https://keda725.github.io/tags/java%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2020-08-12T21:16:04+08:00</lastmod>
+    <lastmod>2020-08-14T19:55:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://keda725.github.io/tags/java%E5%BC%82%E5%B8%B8/</loc>
+    <lastmod>2020-08-14T19:55:51+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://keda725.github.io/posts/</loc>
-    <lastmod>2020-08-12T21:16:04+08:00</lastmod>
+    <lastmod>2020-08-14T19:55:51+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://keda725.github.io/tags/</loc>
-    <lastmod>2020-08-12T21:16:04+08:00</lastmod>
+    <lastmod>2020-08-14T19:55:51+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -40,6 +45,11 @@
                 hreflang="en"
                 href="https://keda725.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://keda725.github.io/posts/2020/08/%E7%83%A6%E4%BA%BA%E7%9A%84%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</loc>
+    <lastmod>2020-08-14T19:55:51+08:00</lastmod>
   </url>
   
   <url>

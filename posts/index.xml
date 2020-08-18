@@ -6,8 +6,32 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-Hans</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Wed, 12 Aug 2020 21:16:04 +0800</lastBuildDate>
+        <lastBuildDate>Fri, 14 Aug 2020 19:55:51 +0800</lastBuildDate>
         <atom:link href="https://keda725.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>烦人的异常体系</title>
+            <link>https://keda725.github.io/posts/2020/08/%E7%83%A6%E4%BA%BA%E7%9A%84%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</link>
+            <pubDate>Fri, 14 Aug 2020 19:55:51 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/2020/08/%E7%83%A6%E4%BA%BA%E7%9A%84%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB/</guid>
+            <description>每当遇到报红，alt+enter
+Java的异常体系 finally 不是必要的
+catch 也不是必要的
+在finally中执行清理工作 不要写返回语句
+try-with-resources. 声明在括号中的 在最后会被自动关闭
+throw
+throws</description>
+            <content type="html"><![CDATA[<p>每当遇到报红，alt+enter</p>
+<h4 id="java的异常体系">Java的异常体系</h4>
+<p>finally 不是必要的</p>
+<p>catch 也不是必要的</p>
+<p>在finally中执行清理工作 不要写返回语句</p>
+<p>try-with-resources.  声明在括号中的 在最后会被自动关闭</p>
+<p>throw</p>
+<p>throws</p>
+]]></content>
+        </item>
         
         <item>
             <title>原生数据类型和引用数据类型</title>
