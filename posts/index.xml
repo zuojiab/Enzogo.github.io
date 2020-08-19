@@ -62,13 +62,76 @@ CREATE TABLE `GRADE`( `GRADE_ID` INT(10) NOT NULL AUTO_INCREMENT COMMENT &amp;#3
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> <span style="color:#f92672">`</span>GRADE<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">null</span>,<span style="color:#e6db74">&#39;大一&#39;</span>),(<span style="color:#66d9ef">null</span>,<span style="color:#e6db74">&#39;大二&#39;</span>),(<span style="color:#66d9ef">null</span>,<span style="color:#e6db74">&#39;大三&#39;</span>) 
 <span style="color:#75715e">-- 之前设置了外键关联 所以在插入的时候 要插入外键对应的值
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>STUDENT<span style="color:#f92672">`</span> (<span style="color:#f92672">`</span>NAME<span style="color:#f92672">`</span>,<span style="color:#f92672">`</span>PWD<span style="color:#f92672">`</span>,<span style="color:#f92672">`</span>GRADE_ID<span style="color:#f92672">`</span>) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;张三&#39;</span>,<span style="color:#e6db74">&#39;123ww&#39;</span>,<span style="color:#ae81ff">1</span>),(<span style="color:#e6db74">&#39;李四&#39;</span>,<span style="color:#e6db74">&#39;123456&#39;</span>,<span style="color:#ae81ff">2</span>)
-</code></pre></div><p>注意事项：</p>
+</code></pre></div><h5 id="注意">注意：</h5>
 <ul>
 <li>字段和字段之间使用英文符号隔开</li>
 <li>字段是可以省略的 但是后面的值必须要一一对应 不能少</li>
 <li>字段可以同时插入多条数据 VALUES后面的值 需要使用,隔开VALUES(),(),&hellip;..</li>
 </ul>
 <h5 id="update">UPDATE</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- UPDATE `表名` SET `column_name`=value,[`column_name`=value,...] WHERE [条件]
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">UPDATE</span> <span style="color:#f92672">`</span>STUDENT<span style="color:#f92672">`</span> <span style="color:#66d9ef">SET</span> <span style="color:#f92672">`</span>NAME<span style="color:#f92672">`=</span><span style="color:#e6db74">&#39;麦当劳&#39;</span> <span style="color:#66d9ef">WHERE</span> ID<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>含义</th>
+<th>范围</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>等于</td>
+<td>5=6</td>
+<td>false</td>
+</tr>
+<tr>
+<td>&lt;&gt; 或者!=</td>
+<td>不等于</td>
+<td></td>
+<td>ture</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>between  &hellip; and</td>
+<td>在某个范围内</td>
+<td>[2,5]</td>
+<td></td>
+</tr>
+<tr>
+<td>and</td>
+<td>相当于&amp;&amp;</td>
+<td>5&gt;1and1&gt;2</td>
+<td>false</td>
+</tr>
+<tr>
+<td>or</td>
+<td>相当于||</td>
+<td>5&gt;1or1&gt;2</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<h5 id="注意-1">注意：</h5>
+<ul>
+<li>字段名 尽量带上``</li>
+<li>条件，筛选条件，如果没有指定，则会修改所有的列</li>
+<li>value 是一个具体的值 也可以是一个变量</li>
+<li>多个设置的属性之间 用英文逗号隔开</li>
+</ul>
 ]]></content>
         </item>
         
