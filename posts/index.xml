@@ -48,9 +48,27 @@ CREATE TABLE `GRADE`( `GRADE_ID` INT(10) NOT NULL AUTO_INCREMENT COMMENT &amp;#3
 </code></pre></div><p><strong>以上的操作是物理外键 数据库级别的外键 不建议使用</strong> （避免数据库过多造成困扰）</p>
 <h5 id="最佳实践"><strong>最佳实践</strong></h5>
 <ul>
-<li>数据库就是单纯的表 只用来存储数据 只有行（数据）和列（字段）</li>
-<li>多张表的数据 使用外键 程序来实现</li>
+<li><strong>数据库就是单纯的表 只用来存储数据 只有行（数据）和列（字段）</strong></li>
+<li><strong>多张表的数据 使用外键 程序来实现</strong></li>
 </ul>
+<h4 id="dml">DML</h4>
+<hr>
+<h5 id="insert">INSERT</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- 插入语句(添加)
+</span><span style="color:#75715e">-- insert into 表名([字段1,字段2,字段3]) values (&#39;值1&#39;),(&#39;值2&#39;),(&#39;值3&#39;)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> <span style="color:#f92672">`</span>GRADE<span style="color:#f92672">`</span> (<span style="color:#f92672">`</span>GRADE_NAME<span style="color:#f92672">`</span>) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;二年级&#39;</span>) 
+<span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> <span style="color:#f92672">`</span>GRADE<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;二年级&#39;</span>)  <span style="color:#75715e">--这是因为这张表中的`GRADE_ID`是主键自增 可以省略  
+</span><span style="color:#75715e">-- 不知道为什么我5.6的版本为什么要写成下面这样子才可以
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> <span style="color:#f92672">`</span>GRADE<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">null</span>,<span style="color:#e6db74">&#39;大一&#39;</span>),(<span style="color:#66d9ef">null</span>,<span style="color:#e6db74">&#39;大二&#39;</span>),(<span style="color:#66d9ef">null</span>,<span style="color:#e6db74">&#39;大三&#39;</span>) 
+<span style="color:#75715e">-- 之前设置了外键关联 所以在插入的时候 要插入外键对应的值
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>STUDENT<span style="color:#f92672">`</span> (<span style="color:#f92672">`</span>NAME<span style="color:#f92672">`</span>,<span style="color:#f92672">`</span>PWD<span style="color:#f92672">`</span>,<span style="color:#f92672">`</span>GRADE_ID<span style="color:#f92672">`</span>) <span style="color:#66d9ef">VALUES</span> (<span style="color:#e6db74">&#39;张三&#39;</span>,<span style="color:#e6db74">&#39;123ww&#39;</span>,<span style="color:#ae81ff">1</span>),(<span style="color:#e6db74">&#39;李四&#39;</span>,<span style="color:#e6db74">&#39;123456&#39;</span>,<span style="color:#ae81ff">2</span>)
+</code></pre></div><p>注意事项：</p>
+<ul>
+<li>字段和字段之间使用英文符号隔开</li>
+<li>字段是可以省略的 但是后面的值必须要一一对应 不能少</li>
+<li>字段可以同时插入多条数据 VALUES后面的值 需要使用,隔开VALUES(),(),&hellip;..</li>
+</ul>
+<h5 id="update">UPDATE</h5>
 ]]></content>
         </item>
         
