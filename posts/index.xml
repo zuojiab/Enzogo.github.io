@@ -6,8 +6,36 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-Hans</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Fri, 14 Aug 2020 19:55:51 +0800</lastBuildDate>
+        <lastBuildDate>Wed, 19 Aug 2020 19:57:27 +0800</lastBuildDate>
         <atom:link href="https://keda725.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Mysql基础（一）</title>
+            <link>https://keda725.github.io/posts/2020/08/mysql%E5%9F%BA%E7%A1%80%E4%B8%80/</link>
+            <pubDate>Wed, 19 Aug 2020 19:57:27 +0800</pubDate>
+            
+            <guid>https://keda725.github.io/posts/2020/08/mysql%E5%9F%BA%E7%A1%80%E4%B8%80/</guid>
+            <description>数值
+ tinyint 十分小的数据 smallint 较小的数据 mediumint 中等大小的数据 int 标准的整数 bigint float double decimal  关键字 ｜ 解释 ｜ 字节
+name | age ---- | --- LearnShare | 12 Mike | 32 </description>
+            <content type="html"><![CDATA[<p>数值</p>
+<ul>
+<li>tinyint 					十分小的数据</li>
+<li>smallint                  较小的数据</li>
+<li>mediumint 		    中等大小的数据</li>
+<li>int                            标准的整数</li>
+<li>bigint</li>
+<li>float</li>
+<li>double</li>
+<li>decimal</li>
+</ul>
+<p>关键字 ｜ 解释  ｜  字节</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">name | age 
+---- | ---
+LearnShare | 12
+Mike |  32
+</code></pre></div>]]></content>
+        </item>
         
         <item>
             <title>烦人的异常体系</title>
