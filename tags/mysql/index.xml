@@ -7,20 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 19 Aug 2020 19:57:27 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2020 22:02:40 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Mysql基础（一）</title>
-      <link>https://keda725.github.io/posts/2020/08/mysql%E5%9F%BA%E7%A1%80%E4%B8%80/</link>
+      <title>Mysql之数据管理</title>
+      <link>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Wed, 19 Aug 2020 22:02:40 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</guid>
+      <description>MySQL之数据管理 </description>
+    </item>
+    
+    <item>
+      <title>Mysql之DDL</title>
+      <link>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8Bddl/</link>
       <pubDate>Wed, 19 Aug 2020 19:57:27 +0800</pubDate>
       
-      <guid>https://keda725.github.io/posts/2020/08/mysql%E5%9F%BA%E7%A1%80%E4%B8%80/</guid>
-      <description>数值
- tinyint 十分小的数据 smallint 较小的数据 mediumint 中等大小的数据 int 标准的整数 bigint float double decimal  关键字 ｜ 解释 ｜ 字节
-name | age ---- | --- LearnShare | 12 Mike | 32 </description>
+      <guid>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8Bddl/</guid>
+      <description>MySQL之DDL  数值
+     关键字 解释 字节     TINYINT 十分小的数据 1   SMALLINT 较小的数据 2   MEDIUMINT 中等大小的数据 3   INT 标准的整数 4   BIGINT 较大的数据 8   FLOAT 浮点数 4   DOUBLE 浮点数 8   DECIMAL 字符串形式的浮点数(金融计算)      字符串
+     关键字 解释 大小     CHAR 字符串固定大小的 0～255   VARCHAR 可变字符串 常用的 String 0～65535   TINYTEXT 微型文本 2^8-1   TEXT 文本串 保存大文本 2^16-1     时间和日期</description>
     </item>
     
   </channel>
