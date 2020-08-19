@@ -18,7 +18,8 @@
       <pubDate>Wed, 19 Aug 2020 22:02:40 +0800</pubDate>
       
       <guid>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</guid>
-      <description>MySQL之数据管理 </description>
+      <description>MySQL之数据管理  外键 方式一 在建表的时候添加
+CREATE TABLE `GRADE`( `GRADE_ID` INT(10) NOT NULL AUTO_INCREMENT COMMENT &amp;#39;年级ID&amp;#39;, `GRADE_NAME` VARCHAR(50) NOT NULL COMMENT &amp;#39;年级名称&amp;#39;, PRIMARY KEY (`GRADE_ID`) )ENGINE=INNODB DEFAULT CHARSET=utf8 -- 学生表中的GRADE_ID字段 去引用年级表中的GRADE_ID -- 定义外键key -- 给这个外键添加约束（执行引用） references 引用 CREATE TABLE `STUDENT` ( `ID` int(10) NOT NULL AUTO_INCREMENT COMMENT &amp;#39;学号&amp;#39;, `NAME` varchar(100) NOT NULL DEFAULT &amp;#39;匿名&amp;#39; COMMENT &amp;#39;姓名&amp;#39;, `PWD` varchar(20) NOT NULL DEFAULT &amp;#39;123456&amp;#39; COMMENT &amp;#39;密码&amp;#39;, `GRADE_ID` INT(10) NOT NULL COMMENT &amp;#39;学生年级&amp;#39;, `SEX` int(2) NOT NULL DEFAULT &amp;#39;1&amp;#39; COMMENT &amp;#39;性别&amp;#39;, `BIRTH` datetime DEFAULT NULL COMMENT &amp;#39;出生日期&amp;#39;, `ADDRESS` varchar(100) DEFAULT NULL COMMENT &amp;#39;家庭地址&amp;#39;, `EMAIL` varchar(30) DEFAULT NULL COMMENT &amp;#39;邮箱&amp;#39;, PRIMARY KEY (`ID`), KEY `FK_GRADE_ID`(`GRADE_ID`), CONSTRAINT `FK_GRADE_ID` FOREIGN KEY (`GRADE_ID`) REFERENCES `GRADE`(`GRADE_ID`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8 方式二 创建表之后 添加外键约束</description>
     </item>
     
     <item>
