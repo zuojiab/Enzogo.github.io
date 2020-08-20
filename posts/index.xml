@@ -10,14 +10,14 @@
         <atom:link href="https://keda725.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Mysql之数据管理</title>
-            <link>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</link>
+            <title>Mysql之数据管理一</title>
+            <link>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E4%B8%80/</link>
             <pubDate>Wed, 19 Aug 2020 22:02:40 +0800</pubDate>
             
-            <guid>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/</guid>
-            <description>MySQL之数据管理  外键 方式一 在建表的时候添加
+            <guid>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E4%B8%80/</guid>
+            <description>MySQL之数据管理一  外键 方式一 在建表的时候添加
 CREATE TABLE `GRADE`( `GRADE_ID` INT(10) NOT NULL AUTO_INCREMENT COMMENT &amp;#39;年级ID&amp;#39;, `GRADE_NAME` VARCHAR(50) NOT NULL COMMENT &amp;#39;年级名称&amp;#39;, PRIMARY KEY (`GRADE_ID`) )ENGINE=INNODB DEFAULT CHARSET=utf8 -- 学生表中的GRADE_ID字段 去引用年级表中的GRADE_ID -- 定义外键key -- 给这个外键添加约束（执行引用） references 引用 CREATE TABLE `STUDENT` ( `ID` int(10) NOT NULL AUTO_INCREMENT COMMENT &amp;#39;学号&amp;#39;, `NAME` varchar(100) NOT NULL DEFAULT &amp;#39;匿名&amp;#39; COMMENT &amp;#39;姓名&amp;#39;, `PWD` varchar(20) NOT NULL DEFAULT &amp;#39;123456&amp;#39; COMMENT &amp;#39;密码&amp;#39;, `GRADE_ID` INT(10) NOT NULL COMMENT &amp;#39;学生年级&amp;#39;, `SEX` int(2) NOT NULL DEFAULT &amp;#39;1&amp;#39; COMMENT &amp;#39;性别&amp;#39;, `BIRTH` datetime DEFAULT NULL COMMENT &amp;#39;出生日期&amp;#39;, `ADDRESS` varchar(100) DEFAULT NULL COMMENT &amp;#39;家庭地址&amp;#39;, `EMAIL` varchar(30) DEFAULT NULL COMMENT &amp;#39;邮箱&amp;#39;, PRIMARY KEY (`ID`), KEY `FK_GRADE_ID`(`GRADE_ID`), CONSTRAINT `FK_GRADE_ID` FOREIGN KEY (`GRADE_ID`) REFERENCES `GRADE`(`GRADE_ID`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8 方式二 创建表之后 添加外键约束</description>
-            <content type="html"><![CDATA[<h3 id="mysql之数据管理">MySQL之数据管理</h3>
+            <content type="html"><![CDATA[<h3 id="mysql之数据管理一">MySQL之数据管理一</h3>
 <hr>
 <h4 id="外键">外键</h4>
 <p>方式一 在建表的时候添加</p>
@@ -131,6 +131,32 @@ CREATE TABLE `GRADE`( `GRADE_ID` INT(10) NOT NULL AUTO_INCREMENT COMMENT &amp;#3
 <li>条件，筛选条件，如果没有指定，则会修改所有的列</li>
 <li>value 是一个具体的值 也可以是一个变量</li>
 <li>多个设置的属性之间 用英文逗号隔开</li>
+</ul>
+<h5 id="delete">DELETE</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#75715e">-- 删除数据 避免这样使用 会删除全部数据
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>STUDENT<span style="color:#f92672">`</span> 
+<span style="color:#75715e">-- 删除指定数据
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>STUDENT<span style="color:#f92672">`</span> <span style="color:#66d9ef">WHERE</span> ID<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">TRUNCATE</span> <span style="color:#75715e">-- 完全清空一个数据表
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">TRUNCATE</span> <span style="color:#f92672">`</span><span style="color:#960050;background-color:#1e0010">表名</span><span style="color:#f92672">`</span>
+</code></pre></div><h5 id="区别">区别</h5>
+<ul>
+<li>相同点 都删除数据 都不会删除表结构</li>
+<li>不同
+<ul>
+<li>TRUNCATE 重新设置自增列</li>
+<li>TRUNCATE 不会影响事务</li>
+</ul>
+</li>
+</ul>
+<h5 id="delete删除的问题---重启数据库-现象">DELETE删除的问题   重启数据库 现象</h5>
+<ul>
+<li>
+<p>如果InnoDB 自增列会从1开始（因为数据是存储在内存当中的，如果没有数据持久化的话 断电即失）</p>
+</li>
+<li>
+<p>如果MyISAM  继续从上一个自增开始 （因为数据是存储在文件当中的，不会丢失）</p>
+</li>
 </ul>
 ]]></content>
         </item>
