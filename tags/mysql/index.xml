@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 19 Aug 2020 22:02:40 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 12:17:03 +0800</lastBuildDate>
     
 	<atom:link href="https://keda725.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mysql之数据管理二</title>
+      <link>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E4%BA%8C/</link>
+      <pubDate>Thu, 20 Aug 2020 12:17:03 +0800</pubDate>
+      
+      <guid>https://keda725.github.io/posts/2020/08/mysql%E4%B9%8B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E4%BA%8C/</guid>
+      <description>DQL查询数据 Data Query Language 数据查询语句
+ 所有的查询操作都用它 select 简单的查询 复杂的查询都能做 数据块中最核心的语言 最重要的语句 使用频率最高的语句  -- 查询全部学生 SELECT * FROM student -- 查询指定字段 SELECT `StudentNo`,`StudentName` FROM student -- 别名 给结果起一个名字 AS 可以给字段起别名 也可以给表起别名 SELECT `StudentNo` AS 学号,`StudentName` AS 学生姓名 FROM student -- 函数 CONCAT(str1,str2,...) SELECT CONCAT(&amp;#39;姓名:&amp;#39;,StudentName) AS 新名字 FROM student 有的时候，列名字不是那么见名知意 起别名 as 字段名 别名</description>
+    </item>
     
     <item>
       <title>Mysql之数据管理一</title>
