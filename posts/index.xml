@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Do Some Great!</title>
+        <title>Posts on You Only Live Once.</title>
         <link>https://keda725.github.io/posts/</link>
-        <description>Recent content in Posts on Do Some Great!</description>
+        <description>Recent content in Posts on You Only Live Once.</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-Hans</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
@@ -60,6 +60,60 @@
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">`</span>StudentNo<span style="color:#f92672">`</span>,<span style="color:#f92672">`</span>StudentResult<span style="color:#f92672">`+</span><span style="color:#ae81ff">100</span> <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">提分后</span> <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">result</span>
 </code></pre></div><p>数据库中的表达式：文本值，列，null，函数，计算表达式，系统变量&hellip;</p>
 <p><strong>select 表达式 from 表</strong></p>
+<h5 id="where条件子句">where条件子句</h5>
+<hr>
+<p>作用: 检索数据中符合条件的值</p>
+<ul>
+<li>and       &amp;&amp;
+<ul>
+<li>a and b      a&amp;&amp;b</li>
+<li>两个都为真 结果为真</li>
+</ul>
+</li>
+<li>or         ||
+<ul>
+<li>a or b    a||b</li>
+<li>其中一个为真 结果为真</li>
+</ul>
+</li>
+<li>not.       !
+*</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- 查询成绩在95～100之间
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> studentNo,studentResult <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">result</span> <span style="color:#66d9ef">WHERE</span> studentResult <span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">80</span> <span style="color:#66d9ef">AND</span> studentResult <span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">100</span>;
+<span style="color:#66d9ef">SELECT</span> studentNo,studentResult <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">result</span> <span style="color:#66d9ef">WHERE</span> studentResult <span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">80</span> <span style="color:#f92672">&amp;&amp;</span> studentResult <span style="color:#f92672">&lt;=</span><span style="color:#ae81ff">100</span>;
+<span style="color:#66d9ef">SELECT</span> studentNo,studentResult <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">result</span> <span style="color:#66d9ef">WHERE</span> studentResult <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">80</span> <span style="color:#66d9ef">AND</span> <span style="color:#ae81ff">98</span>;
+
+<span style="color:#75715e">-- 除编号1000以外的成绩
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> studentNo,studentResult <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">result</span> <span style="color:#66d9ef">WHERE</span> studentNo <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1000</span>
+<span style="color:#66d9ef">SELECT</span> studentNo,studentResult <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">result</span> <span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">NOT</span> studentNo<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>
+</code></pre></div><p>模糊运算：比较运算符</p>
+<ul>
+<li>is null
+<ul>
+<li>a is null</li>
+<li>如果操作符为null 结果为真</li>
+</ul>
+</li>
+<li>Is not null
+<ul>
+<li>a is not null</li>
+<li>如果操作符不为null 结果为真</li>
+</ul>
+</li>
+<li>between
+<ul>
+<li>a between b and c</li>
+<li>a 在b和c之间 结果为真</li>
+</ul>
+</li>
+<li>like
+<ul>
+<li>a like b</li>
+<li>sql匹配</li>
+</ul>
+</li>
+</ul>
 ]]></content>
         </item>
         

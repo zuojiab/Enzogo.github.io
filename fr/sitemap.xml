@@ -17,20 +17,6 @@
   </url>
   
   <url>
-    <loc>https://keda725.github.io/fr/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://keda725.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://keda725.github.io/fr/"
-                />
-  </url>
-  
-  <url>
     <loc>https://keda725.github.io/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -55,6 +41,20 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://keda725.github.io/fr/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://keda725.github.io/fr/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://keda725.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://keda725.github.io/fr/"
                 />
   </url>
   
